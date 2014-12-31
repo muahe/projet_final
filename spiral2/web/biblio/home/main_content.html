@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="../biblio_app.html">
+<link rel="import" href="../bibliotheques/import_biblio.html">
+<link rel="import" href="../ouvrages/import_ouvrage.html">
+<link rel="import" href="../ouvrages/import_touvrage.html">
+<link rel="import" href="../usagers/import_usager.html">
+
+<polymer-element name="main-content">
+  <template>
+<link rel="stylesheet" href="../css/importation.css"  />
+  <style>
+
+  </style>
+
+  <template if="{{importBiblioClicked}}">  
+    <import-biblio></import-biblio>
+  </template>
+
+
+  <template if="{{importOuvrageClicked}}">  
+    <import-ouvrage></import-ouvrage>
+  </template>
+
+  <template if="{{importtypOuvrClicked}}">  
+    <import-touvrage></import-touvrage>
+  </template>
+  
+  <template if="{{importUsagerClicked}}">  
+    <import-usager></import-usager>
+  </template>  
+
+  </template>
+  <script type="application/dart" src="main_content.dart"></script>
+</polymer-element>   

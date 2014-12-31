@@ -1,0 +1,74 @@
+{
+    "USAGERS": [
+      {
+        "nom": "Gabrielle Roy",
+        "tel": "418 641-6780",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "Gabrielle@Roy.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Mustapha Aherfoune",
+        "tel": "418 641-6781",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "Mustapha@Aherfoune.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Carl Auclair",
+        "tel": "418 641-6782",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "carl@auclair.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Stephanie tremblay",
+        "tel": "418 641-6783",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "Stephanie@tremblay.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Pierre Bedard",
+        "tel": "418 641-6784",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "pierre@bedard.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Wilfred Hamel",
+        "tel": "418 641-6785",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "wilfrid@hamel.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Robert Bourassa",
+        "tel": "418 641-6786",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "robert@bourassa.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Yanik lemlain",
+        "tel": "418 641-6787",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "yanik@lemlain.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Pierre Bertrand",
+        "tel": "418 641-6788",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "pierre@bertrand.com",
+        "motPasse": "qwertyuiop"
+      },
+      {
+        "nom": "Claudie Nadeau",
+        "tel": "418 641-6789",
+        "adresse": "350, rue Saint-Joseph Est",
+        "courriel": "claudie@nadeau.com",
+        "motPasse": "qwertyuiop"
+      }	  
+    ]
+}

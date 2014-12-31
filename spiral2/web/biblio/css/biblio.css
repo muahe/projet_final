@@ -1,0 +1,3603 @@
+/* 
+* éléments généraux
+*/
+body
+{
+   /*font-family: Verdana,Impact,"Comic Sans MS", Arial, sans-serif;*/
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.8em;
+   scrollbar-face-color: #E9E9E8;
+   scrollbar-highlight-color: #F4F4F4;
+   scrollbar-shadow-color: #E5E5E5;
+   scrollbar-arrow-color: white; 
+   scrollbar-base-color: #C6C6C6;
+   margin:0 0 0 10px;
+   /*background: url(../icons/css/biblio2/visual/bg_body.gif) white repeat-x
+   */
+   }
+.BodyNoBg
+{
+   background:none;
+}
+
+/* Lien classique */
+:link{
+   text-decoration:none;
+   color:#3D5F96;
+}
+em{
+   color:#F88020;
+   text-transform: uppercase;
+   font-style: normal;      
+}
+:visited{
+   text-decoration:none;
+   color:#5b628c;
+}
+:link:hover{
+   color:#F88020;
+}
+select{  
+   border: #626F7C 1px solid;
+   font-size:0.9em; 
+   /*background-image: url(../icons/css/biblio2/visual/shadow_textbox2.gif);*/
+   background-repeat: no-repeat;
+   color: #626F7C;
+   background-color: #F8F8F8;
+}
+option[selected] {
+   background-color: #FFB647;
+   color: #FFFFFF;
+   vertical-align: top;
+   margin: 0;
+   padding: 0;
+}
+h1{
+   text-align : center;
+   font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+   font-size : 1.25em;
+   color : #6F6F6F;
+   margin-top:30px;
+}
+h2{    
+   font-family:  "Trebuchet MS", Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   color : #525252;
+   font-size : 1.1em;
+}
+h3{    
+   color : #525252;
+   font-size : 0.7em;
+}
+h5{
+   font-size : 0.9em;
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+}
+
+/**
+ *    Tableau standard
+ */
+
+table
+{
+   /*font-family: Verdana,Impact,"Comic Sans MS", Arial, sans-serif;*/
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size: 9pt;
+   vertical-align : middle;
+ }
+
+th
+{
+   font-size: 10pt;
+   padding: 2px;
+   color : #6F6F6F;
+}
+input{
+   font-size: 9pt;
+}
+.welcome{
+   color : #8C94BF;
+   font-size : medium;
+}
+.Required{
+   color: #FF841F;
+   font-weight: bold;
+}
+.alert
+{
+   color: red;
+   font-weight: bold;
+}
+
+/*
+.calque{
+   align: left;
+   margin-left: 0px;
+   margin-top: 0px;
+}
+*/
+.Dcm{
+   margin : 0pt ;
+   background-color: #DBE1EA;
+}
+.FullText{
+   background-color: #ffffff;
+}
+.Blank{
+   background-color: #ffffff;
+}
+/* Boutons standards */
+.CommandButton, .CommandLikeButton{
+   background: #009CA9 url(../icons/css/biblio2/visual/bg_button.gif) repeat;
+   padding: 3px;
+   margin:5px;
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.9em;
+   color: white;
+   font-weight: bold;   
+   border: 1px solid white;
+   cursor: pointer; 
+}
+.CommandButton:hover, .CommandLikeButton:hover{
+   background: #009CA9 url(../icons/css/biblio2/visual/bg_button_hover.gif) repeat;
+   color:white;
+}
+ .CommandLikeButton{
+ padding:0.5em;
+ }
+ .CommandLikeButton:visited{
+    color:white;
+ }
+
+/*
+input
+*/
+.textbox, textarea,.listbox, select,input.textfield, .bigtextarea,.textboxDisabled, .pagebox{
+   /*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.95em; 
+   border: #F88020 1px solid;
+   color:#522705;
+   background-color: #FFE9D8;
+}
+.textbox:focus, textarea:focus, .listbox:focus, select:focus, .bigtextarea:focus,.pagebox:focus{
+   /*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.95em; 
+   border: #FFB647 1px solid;
+   color:black;
+   background-color: #F9EEDB;
+}
+/* input de saisie */
+.textboxInput, .selectInput,.DateInputNotMarc{
+      /*font-family: Verdana, Arial, Helvetica, sans-serif; */
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   border: #F88020 1px solid;
+   color:black;
+   background-color: white;
+   vertical-align: middle;
+   text-align: left;
+   width:300px;
+   margin-right:5px;
+   font-size:1em; 
+}
+.DateInputNotMarc
+{
+   width:7em;
+   margin-right:0.5em;
+   vertical-align:middle;
+}
+.assist{
+   margin-left:0.5em;
+   padding-bottom:0.5em;
+}
+input:disabled, .textboxDisabled{
+   background-color: #F3F3F3;
+   border: #d7bca6 1px solid;
+}
+
+input:radio{
+   border: none;
+}
+
+/*classe pour input*/
+.textbox {
+   height: 19px;
+   background-image: none;
+}
+
+.textarea
+{
+   /* tdn 29/03/2007 produit un mauvais effet dans input grid (cf. thesaurus)
+   background-image: url(../icons/css/default/visual/shadow_textbox.gif);
+   background-repeat: no-repeat;
+   */
+}
+.pagebox{
+ width:25px;
+ height:16px;
+ text-align:center;
+ line-height:12px;
+ font-size:0.9em;
+ }
+ /* identique à select selectbox*/
+.listbox{
+   background-repeat: no-repeat;
+}
+
+/* div d'attente pour chargement */
+#attente
+{
+background: url(../icons/css/biblio2/visual/loader.gif) no-repeat; 
+position:absolute;
+left: 50%;
+top: 20%;
+width: 250px !important;
+width: 300px;
+height: 100px !important;
+height: 200px;
+/*margin-top: -100px; */
+margin-left: -150px; 
+border:1px solid #819CBC;
+color:white;
+font-weight: bold;
+padding:70px 0px 0px 30px;
+z-index: 3000; /* plus grand que sysDisableMask */
+}
+/* div d'attente pour chargement */
+#attenteBasket{
+background: url(../icons/css/biblio2/visual/basket.gif) no-repeat; 
+position:absolute;
+left: 50%;
+top: 20%;
+width: 300px;
+height: 200px;
+margin-top: -100px; 
+margin-left: -150px; 
+border:1px solid #819CBC;
+color:white;
+font-weight: bold;
+padding:100px 0px 0px 50px;
+}
+/* Chargement dans les treeview */
+#loading{
+   background: url(../icons/css/biblio2/visual/wait_anim.gif) no-repeat; 
+   position:absolute;
+   /*TODO : enlever le align:center qui n'est pas bon quand nouvelle animation de chargement*/
+   align:center;
+   color:white;
+   width: 100%;
+   height: 100%;
+   margin-top: 100px; 
+   margin-left: 50px; 
+}
+
+/*fin éléments généraux */
+
+/*page d'accueil*/
+
+.Index{
+   background: #D3D3D3;
+}
+#IndexContainer{
+   position: absolute;
+   width: 700px;
+   height:417px;
+   left: 50%;
+   top:19%;
+   margin-left: -375px;
+   background: url(../icons/css/biblio2/visual/bg_accueil.jpg) no-repeat;
+}
+.LogoAccueil
+{
+   position:relative;
+   margin:0;
+   padding:0;
+   float:left;
+}
+#IndexAuthentification{
+   margin-top:170px;
+   text-align: right;
+   margin-right:100px;
+}
+#IndexContainer p {
+   color: #707070;
+   font-size:0.9em;
+   padding:0;
+   margin:4px 0 4px 0;
+}
+#IndexContainer .textbox{
+   background-color: #E7E7E7;
+   border:0;
+   color:black;
+}
+#IndexVerification{
+   position: relative;
+   margin-top:105px;
+   text-align:center;
+}
+#IndexAnonymous{
+   color: #707070;
+}
+#IndexVerification a{
+   color:white;
+}
+#IndexVerification a:hover{
+   color:#6B6B6B;
+}
+
+/*
+*   frame workspace
+*/
+
+/* Main Menu */
+.MainMenu{
+   background: url(../icons/css/biblio2/visual/bg_win_menu.gif) top left no-repeat #ffffff;
+   font-size:0.9em;
+   color:black;
+   margin:0;
+   padding:0;
+}
+.MainMenu li{
+   display:inline;
+}
+
+/* Workspace */
+
+#WorkSpace {
+   font-size:0.9em;
+   margin-bottom:14px !important;
+   margin:7px 0 0 50px;
+   height:17px;
+}
+#WorkSpace a{
+   font-size:0.85em;
+   color:black;
+   padding:0px 3px 0px 6px;
+}
+#WorkSpace a:hover{
+   font-size:0.9em;
+   color:#FF841F;
+   font-weight:bold; 
+}
+.WorkSpaceSeparator{
+   color:#FF841F;
+}
+.TabSelected a{
+   border-color:white;
+}
+
+/* QuickBar */
+
+#QuickBar{
+   height: 17px;
+   background: url(../icons/css/biblio2/visual/bg_menu.gif) repeat-x;
+   line-height: 17px;
+   font-size:0.75em;
+   color:silver;
+}
+#QuickBar li{
+    height: 17px;
+   line-height: 17px;
+}
+#QuickBar ul{
+   display:inline;
+}
+#QuickBar a{
+   color: White;
+   padding:1px 5px 2px 5px;
+}
+#QuickBar a:hover{
+   background: url(../icons/css/biblio2/visual/bg_menu_hover.gif) repeat-x;
+}
+#StaticItems{
+margin-right:30px;
+}
+
+/* fin Main Menu */
+
+
+
+/* QuickMenu */
+
+#QuickLaunchMenu ul{
+   display:none;
+
+}
+.QuickMenu{
+   border:1px solid white;
+}
+#QuickNewObject{
+   position:absolute;
+   top:0;
+   left:0;
+}
+#QuickSearch{
+   position:absolute;
+   top:0;
+   left:70;
+}
+.QuickMenu li{
+   display:block;
+   color: Gray;
+   background: url(../icons/css/biblio2/visual/bg_quick_menu.gif) repeat-x;
+   padding:2px 10px 3px 0px;
+   list-style: url(../icons/css/biblio2/visual/li_quick_menu.gif) inside;
+}
+.QuickMenu a{
+   margin-left:10px;
+}
+.QuickMenu a:hover{
+   color: #FF841F;
+}
+
+/*
+*    fin frame workspace
+*/
+
+.IndexVersion{
+background: #D8D8D8;   
+}
+#VersionContainer{
+   position: absolute;
+   width: 700px;
+   height:417px;
+   left: 50%;
+   top:12%;
+   margin-left: -355px;
+   background:white;
+}
+.version{
+   color: #9E9E9E;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+    font-size:1.3em;
+ }
+ .version span {
+    color: silver;
+   font-size:0.8em;
+ }
+  .version div {
+    color: #848484;
+   font-size:0.7em;
+ }
+/*
+*   frame menus principaux gauche 
+*/
+
+/* TREEVIEW */
+.SubMenu {
+   background: url(../icons/css/biblio2/visual/logo.gif) no-repeat;
+   margin:0;
+}
+.Logo
+{
+   margin-left:20px;
+}
+
+#menuTree{
+   border-top:1px solid #DDDDDD;      
+   margin-left:5px;
+   width:215px;
+   overflow: auto;
+   overflow-x:hidden;
+   height:75% !important; 
+   height:78%;
+}
+.SubMenu div{
+   cursor:pointer;
+}
+
+.FullScreen{
+   border: 0;
+   margin-top:60px;
+   margin-bottom:3px !important;
+   margin-bottom:1px;
+   margin-left:5px;
+   width: 21px;
+   height:20px;
+}
+.FullScreen-over{
+   position:absolute;
+   top:0;
+   left:0;
+   margin:0;
+   border: 0;
+}
+/*niveau 1*/
+.MenuLevel1,.MenuLevel1-over{
+   color: #606060;
+     line-height: 32px;
+   font-size:1em;
+   width:187px;
+   /*border-right:1px solid #ADB6C8;
+   border-left:1px solid #ADB6C8;*/
+   background: url(../icons/css/biblio2/visual/bg_menu_tree_menu-dir.gif) no-repeat; 
+   height:32px;
+}
+.MenuLevel1 span, .MenuLevel1-over span {
+   margin-left:-5px;
+}
+.MenuLevel1-over{
+   font-weight: bold;
+   color:#5C6880;
+   background: url(../icons/css/biblio2/visual/bg_menu_tree_menu-dir-over.gif) no-repeat; 
+}
+.IconLevel{
+   vertical-align:middle;
+   line-height: 32px;
+   padding:0;
+   margin-top:0.5em;
+   margin-bottom:0.6em;
+   margin-left:30px;
+   margin-right:-30px;
+}
+.IconLevel2{
+   vertical-align:middle;
+   margin-left:-10px;
+   margin-right:5px;
+}
+/*niveau 2*/
+.MenuLevel2, .MenuLevel2-over{  
+   color:#39516B;
+   line-height: 22px;
+   font-size:0.85em;
+   width:182px;
+   /*border-right:1px solid #A3A3A3;
+   border-left:1px solid #A3A3A3;*/
+   background: url(../icons/css/biblio2/visual/bg_menu_tree_menu-item_over.gif);
+   height:25px;
+   text-overflow : ellipsis; 
+   overflow : hidden;
+}
+.MenuLevel2 span, .MenuLevel2-over span{
+      padding-left:30px;
+}
+.MenuLevel2-over{
+   color:white;
+   font-weight: bold;
+   background: url(../icons/css/biblio2/visual/bg_menu_tree_menu-item.gif);
+}
+.MenuLevel3, .MenuLevel3-over{
+   padding:5px 0 5px 0;
+   margin-left:3px;
+   color: #747474;
+   font-size:0.85em;
+   width:180px;
+   border-right:1px solid #A3A3A3;
+   border-left:1px solid #A3A3A3;
+   background-color: #F3F8FF; 
+   text-overflow : ellipsis; 
+   overflow : hidden; 
+   white-space: nowrap;
+}
+.MenuLevel3-over{
+   font-weight: bold;
+   color:#FF8A1F;
+   background-color: #E1EFFF; 
+}
+.MenuLevel3 span, .MenuLevel3-over span{
+   padding-left:38px;
+}
+/* barre arrondie : fin du menu*/
+.MenuDirEnd{
+   width:182px;
+   height:8px;
+   background: url(../icons/css/biblio2/visual/bg_menu_tree_menu-dir-end.gif) repeat-x; 
+}
+#LogoSmall{
+   margin:5px 0 20px 30px;
+   border:0;
+}
+/* fin TREEVIEW */
+
+/*
+*   fin frame menus principaux gauche 
+*/
+
+
+/*  
+*       page de résultats 
+*/
+
+/*barre de navigation */
+
+#Navigate,#Navigate2{
+   color:#8C94BF;
+   float:right;
+   font-size:0.9em;
+   margin-right:5px;
+   /* margin-top:-34px; */
+}
+#Navigate2{
+   margin-top:0;
+}
+#Navigate img{
+   /*height:10px;*/
+}
+#CountResult{
+   text-align:center;
+   margin-top:5px;
+}
+/*barre de chemin */
+
+#Path{
+   font-size:0.9em;
+   color:#8C94BF;
+   margin-bottom:10px;
+   margin-top:5px;
+}
+/*
+en attente de mise en forme 
+#Path li{
+}
+#Path a{
+}
+#PathLevel1{
+}
+#PathLevel2{
+}
+#PathLevel3{
+}
+#PathLevel4{
+}
+*/
+
+/*Tool bar */
+.ToolBarContainer{
+   margin-bottom:3px;
+}
+.ToolBarContainerInput{
+   margin-top:-25px;
+   margin-left:20px;
+}
+.ToolBar{
+   display: inline;
+   margin-right:5px;
+}
+.ToolBarHideButton{
+   display: inline;
+   margin-left:100px;
+}
+.ToolBarHeader{
+   background: url(../icons/css/biblio2/toolbar/header.gif) no-repeat; 
+   height: 34px;
+   width:5px;
+}
+.ToolBarBody{
+   border-top:1px solid #C1C1C1;
+   border-bottom:1px solid #C1C1C1;   
+   color:#C1C1C1;
+   font-size:0.9em;
+   background-color: White;
+}
+.ToolBarBodyTitle{
+   border-top:1px solid #C1C1C1;
+   border-bottom:1px solid #C1C1C1;   
+   font-family:  "Trebuchet MS", Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   color:#525252;
+   font-size:1.1em;
+   font-weight:bold;
+   background-color: White;
+}
+.ToolBarBodyText{
+   border-top:1px solid #C1C1C1;
+   border-bottom:1px solid #C1C1C1;   
+   color:#646464;
+   font-size:0.9em;
+   background-color: White;
+}
+
+.ToolBarBody img{
+margin: 0;
+padding: 0;
+   vertical-align: middle;
+}
+.ToolBarBodyTable{   
+   color:#C1C1C1;
+   font-size:0.9em;
+   background-color: White;
+}
+.ToolBarFooter{
+   background: url(../icons/css/biblio2/toolbar/footer.gif) no-repeat; 
+   height: 34px;width:5px;
+}
+.ToolBarFooterAction{
+   background: url(../icons/css/biblio2/toolbar/footer_action.gif) no-repeat; 
+   height: 34px;width:5px;
+}
+#ToolBarInline{
+margin-left:20%;
+margin-top:-45px;
+float:right;
+display:block;
+}
+.ToolBarBody span, .ToolBarBody label, .ToolBarBody input{
+   color:#6f6f6f;
+   display:inline;
+}
+/* Tableau fixe d'identifiants */
+.IdentArray{
+   width: 98%;
+   height: 68%;
+   overflow: auto;
+   border:0;
+   border-bottom: 1px solid #e1e1e1;
+   overflow-y:scroll;
+   overflow-x:hidden;
+   
+}
+
+/* Barre de titre listes de réponse */
+.Tableborder{
+   border:0;
+   border-left: 1px solid #C7C7C7;
+   border-right: 1px solid #C7C7C7;
+   border-style: inset;
+}
+
+.TableborderOne{
+   border:0;
+   border-style: inset;
+   text-align: left;
+}
+.TableborderOne td {
+   border-bottom:1px solid #E1E1E1;
+}
+.tdLeft {
+   border-left: 1px solid #C7C7C7;
+}
+.tdRight {
+   border-right: 1px solid #C7C7C7;
+}
+.question{
+   color:#C1C1C1;
+}
+.QuestionEm{
+   font-size:0.9em;
+   color:#8C94BF;
+}
+.TdBorderRight{
+   border-right: 1px solid #C7C7C7;
+}
+.TdBorderBottom{
+   border-bottom: 1px solid #C7C7C7;
+}
+.TdBorderBottomRight{
+   border-right: 1px solid #C7C7C7;
+   border-bottom: 1px solid #C7C7C7;
+}
+.TdBorderBottomLeft{
+   border-left: 1px solid #C7C7C7;
+   border-bottom: 1px solid #C7C7C7;
+}
+
+.TdBorderTop{
+   border-top: 1px solid #C7C7C7;
+}
+.TdBorderTopRight{
+   border-right: 1px solid #C7C7C7;
+   border-top: 1px solid #C7C7C7;
+}
+.TdBorderTopLeft{
+   border-left: 1px solid #C7C7C7;
+   border-top: 1px solid #C7C7C7;
+}
+
+th.TitleBarIdent{
+   text-align : center;
+   background: #ffffff url(../icons/css/biblio2/table/bg_header_center.gif);
+   font-weight : bold;
+   color: black;
+   font-size: 9pt;
+   padding: 0px;
+}
+
+th.TitleBarIdentLeft{
+   text-align : left;
+   background: #ffffff url(../icons/css/biblio2/table/bg_header_center.gif);
+   font-weight : bold;
+   color: black;
+   font-size: 9pt;
+   padding: 0px;
+}
+th.TitleBarIdentRight{
+   text-align : right;
+   background: #ffffff url(../icons/css/biblio2/table/bg_header_center.gif);
+   font-weight : bold;
+   color: black;
+   font-size: 9pt;
+   padding: 0px;
+}
+
+
+/* Numéro */
+th.ident-rank{
+   text-align : center;
+   background: #ffffff url(../icons/css/biblio2/table/bg_header_left.gif) left ;
+   font-weight : bold;
+   color: black;
+   width : 20px;
+   height:39px;
+   font-size: 9pt;
+}
+/* Case à cocher */
+th.ident-check{
+   text-align : center;
+   background:  #ffffff url(../icons/css/biblio2/table/bg_header_center.gif) left ;
+   font-weight : bold;
+   color: black;
+   width : 20px;
+   font-size: 9pt;
+   height:39px;
+}
+/* Toggle */
+th.ident-toggle{
+   text-align : center;
+   background: #ffffff url(../icons/css/biblio2/table/bg_header_center.gif);
+   font-weight : bold;
+   color: black;
+   width : 20px;
+   height:39px;
+   font-size: 9pt;
+}
+.alternation{
+background-color:#F9F9F9;
+}
+
+.alternationErrorExtraLight{
+background-color:#FFE9E9;
+}
+.alternationErrorLight{
+background-color:#FFD0D0;
+}
+
+/* Ligne d'identifiant */
+td.Ident {
+   font-size:9pt;
+      vertical-align:middle;
+  /* font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif;*/
+}
+td.Ident  a{
+color:black;
+}
+
+/* Numéro */
+td.ident-rank{
+   padding: 2px 3px;
+   font-size:1em;
+ /*  font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif;*/
+   width : 20px;
+   vertical-align:middle;
+}
+/* Case � cocher */
+td.ident-check{
+   padding: 2px 3px;
+   font-size:1em;
+  /* font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif; */
+   width : 20px;
+   border-right:1px solid #E1E1E1;
+      vertical-align:middle;
+}
+
+/* Nom de la source */
+td.ident-source{
+   padding: 2px 3px;
+   font-size:1em;
+  /* font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif;*/
+   width : 70px;
+      vertical-align:middle;
+}
+/* Score TI */
+td.ident-score{
+   padding: 2px 3px;
+   font-size:1em;
+ /*  font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif; */
+   width : 40px;
+      vertical-align:middle;
+}
+td.ident-toggle{
+   padding: 2px 3px;
+   font-size:1em;
+  /* font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif; */
+   width : 20px;
+      vertical-align:middle;
+}
+/* Type du document d�crit par la notice */
+td.ident-doc-type{
+   padding: 2px 3px;
+   font-size:1em;
+ /*  font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif; */
+   width : 30px;
+      vertical-align:middle;
+}
+td.identImage {
+text-align:center;
+width:60px;
+      vertical-align:middle;
+         border-left:1px solid #E1E1E1;
+         background:#ebebeb;
+         border-bottom:1px solid white;
+}
+td.identImage img{
+width:50px;
+   border:3px solid white;
+}
+
+/* fin de th */
+th.end-header{
+   background: #ffffff url(../icons/css/biblio2/table/bg_header_right.gif) right;
+   width : 40px;
+   height:39px;
+}
+/* view */
+#Onglets{
+   padding-left:10px;
+   margin-left:-10px;
+   height:33px;
+   background: url(../icons/css/biblio2/visual/bg_body.gif) white repeat-x;
+}
+.Onglets,.Onglets3{
+   height:40px;
+   background: url(../icons/css/biblio2/visual/bg_body.gif) white repeat-x;
+}
+.Onglets3{
+padding-top:5px;
+}
+#OngletsAlone{
+   height:40px;
+   background: url(../icons/css/biblio2/visual/bg_body.gif) white repeat-x;
+      
+ }
+#OngletsMulti{
+   height:30px;
+   background: url(../icons/css/biblio2/visual/bg_body_multi.gif) white bottom repeat-x;
+}
+.OngletsMulti{
+   height:30px;
+   background: url(../icons/css/biblio2/visual/bg_body_multi.gif) white bottom repeat-x;
+}
+.TabViewMulti{
+   margin-top:6px;
+   color:white;   
+   background: url(../icons/css/biblio2/visual/bg_body.gif) white repeat-x;
+}
+.TabView{
+   margin-top:6px;
+   color:white;
+}
+.TabViewSelectedLink,.TabViewSelectedCenter a:hover,.TabViewSelectedCenter a:link,
+.TabViewSelectedCenter a:visited,.TabViewSelectedLink:hover,.TabViewSelectedLink:visited,
+.TabViewSelectedLink:link
+{
+   color:#7e88b8;
+   font-weight:bold;
+}
+.TabViewSelectedCenter{
+   color:#7e88b8;
+   font-size: 0.9em;
+   font-weight:bold;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_selected_center.gif) repeat;
+   text-align : center;
+}
+
+.TabViewSelectedleft{
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_selected_left.gif) top left;
+   height: 18px;
+   width:5px;
+}
+.TabViewSelectedright{
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_selected_right.gif) top right;
+   height: 18px;
+   width:5px;
+}
+
+.TabView2SelectedLink,.TabView2SelectedCenter a:hover,.TabView2SelectedCenter a:link,
+.TabView2SelectedCenter a:visited,.TabView2SelectedLink:hover,.TabView2SelectedLink:visited,
+.TabView2SelectedLink:link
+{
+   color:#e57c1d;
+   font-weight:bold;
+}
+.TabView2SelectedCenter{
+   color:#e57c1d;
+   font-size: 0.9em;
+   font-weight:bold;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview2_selected_center.gif) repeat;
+   text-align : center;
+}
+
+.TabView2Selectedleft{
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview2_selected_left.gif) top left;
+   height: 18px;
+   width:5px;
+}
+.TabView2Selectedright{
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview2_selected_right.gif) top right;
+   height: 18px;
+   width:5px;
+}
+
+.TabViewNotSelectedCenter{
+   font-size: 0.9em;
+   color : #F1924B;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_center.gif) repeat;
+   text-align : center;
+}
+.TabViewNotSelectedleft{
+   height: 18px;
+   width:5px;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_left.gif) top left;
+}
+.TabViewNotSelectedright{
+   height: 18px;
+   width:5px;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_right.gif) top right;
+}
+.TabViewNotSelectedText{
+   color : #505050;
+}
+.TabViewNotSelectedCenter a:link, .TabViewNotSelectedCenter a:visited{
+      color : #8a8a8a;
+ }
+ .TabViewNotSelectedCenter a:hover{
+ color:black;
+ }
+
+
+.TabView2NotSelectedCenter{
+   font-size: 0.9em;
+   color : #F1924B;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_center.gif) repeat;
+   text-align : center;
+}
+.TabView2NotSelectedleft{
+   height: 18px;
+   width:5px;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_left.gif) top left;
+}
+.TabView2NotSelectedright{
+   height: 18px;
+   width:5px;
+   background: #ffffff url(../icons/css/biblio2/table/bg_tabview_right.gif) top right;
+}
+.TabViewSpace{
+   width:2px;
+}
+.TabView2NotSelectedText{
+   color : #505050;
+}
+.TabView2NotSelectedCenter a:link, .TabView2NotSelectedCenter a:visited{
+      color : #8a8a8a;
+ }
+ .TabView2NotSelectedCenter a:hover{
+ color:black;
+ }
+
+
+/* Barre de titre dans les vues */
+th.TitleBarView{
+   text-align : right;
+   background: #ffffff url(../icons/css/biblio2/visual/assis2.gif) repeat left top; 
+   padding: 2px;
+   font-weight : bold;
+   /*font-family:Tahoma, Geneva, Arial, Helvetica, sans-serif;*/
+      font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+   font-size:0.9em;
+   color: #8C94BF;
+}
+
+/* Vue des notices */
+
+.ViewPhotoContainer{
+   float:right;
+   background-color:#ECECEC;
+   margin:0;
+   width:300px;
+}
+
+/* en tête des images */
+.TabViewPhotoHeaderleft{
+   height: 9px;
+   background: #ECECEC url(../icons/css/biblio2/table/bg_view_photo_left.gif) top left repeat-x;
+}
+.TabViewPhotoHeaderright{
+   height: 9px;
+   background:#ECECEC url(../icons/css/biblio2/table/bg_view_photo_right.gif) top right repeat-x;
+}
+.TabViewPhototd{
+   border-left:1px solid #E1E1E1;
+   border-right:1px solid #E1E1E1;
+}
+.TabViewPhotoFooterleft{
+   height: 29px;
+   background: #ECECEC url(../icons/css/biblio2/table/bg_view_photo_footer_left.gif) top left repeat-x;
+}
+.TabViewPhotoFooterright{
+   height: 29px;
+   background:#ECECEC url(../icons/css/biblio2/table/bg_view_photo_footer_right.gif) top right repeat-x;
+}
+.PhotoContainer{
+   padding:10px 10px 10px 20px;
+   display:block;
+}
+.ReportIcon{
+   vertical-align: top;
+   margin:0;
+   position:relative;
+   padding:0;
+}
+
+/*en tête tableau view*/
+.TabViewHeaderLeft{
+   height: 15px;
+   width:auto !important;
+   width:5px;
+   background: #ffffff url(../icons/css/biblio2/table/bg_view_left.gif) left;
+}
+.TabViewHeaderRight{
+   height: 15px;
+   width:auto !important;
+   width:5px;
+   background: #ffffff url(../icons/css/biblio2/table/bg_view_right.gif) right;
+
+}
+th.view-field-title{
+   padding: 3px;
+   border:0;
+   border-left:1px solid #CDCDCD;
+   border-right:1px solid #CDCDCD;
+   color:#828282;
+   padding-left:10px;
+}
+th.view-field-label{
+   text-align : left; /* RTL */
+   vertical-align : top;
+   font-size:0.9em;
+   padding: 3px;
+   border:0;
+   border-left:1px solid #CDCDCD;
+   border-style: outset;
+   color:#828282;
+   padding-left:10px;
+}
+th.view-field-label2{
+   text-align : left; /* RTL */
+   vertical-align : top;
+   font-size:0.9em;
+   padding: 3px;
+   border:0;
+   border-left:1px solid #CDCDCD;
+   border-style: outset;
+   color:#828282;
+   padding-left:10px;
+}
+td.view-field-value{
+   text-align : left; /* RTL */
+   font-size:1em;
+   padding: 3px;
+   border:0;
+   border-right:1px solid #CDCDCD;
+   padding-right:10px;
+}
+.TableView{
+   border-bottom: 1px solid #CDCDCD;
+   margin-bottom:10px;
+}
+.h2TableView{
+font-size:1.2em;
+}
+/* tableau pourconfiguration de la base */
+th.dbadmin-field-title{
+   padding: 3px;
+   border:0;
+   border-left:1px solid #CDCDCD;
+   border-right:1px solid #CDCDCD;
+   color:#828282;
+   padding-left:10px;
+}
+th.dbadmin-field-label{
+   text-align : left; /* RTL */
+   font-size:0.9em;
+   padding: 3px;
+   border:0;
+   border-left:1px solid #CDCDCD;
+   padding-left:10px;
+}
+td.dbadmin-field-value{
+   text-align : left; /* RTL */
+   font-size:1em;
+   padding: 3px;
+   border:0;
+   border-right:1px solid #CDCDCD;
+   padding-right:10px;
+}
+
+th.dbadmin-field-label-top{
+   text-align : left; /* RTL */
+   font-size:0.9em;
+   padding: 3px;
+   border:0;
+   border-left:1px solid #CDCDCD;
+   border-top:1px solid #CDCDCD;
+   padding-left:10px;
+}
+
+td.dbadmin-field-value-top{
+   text-align : left; /* RTL */
+   font-size:1em;
+   padding: 3px;
+   border:0;
+   border-right:1px solid #CDCDCD;
+   border-top:1px solid #CDCDCD;
+   padding-right:10px;
+}
+/* accueils rubrique */
+
+/*Recherche simple*/
+
+.BgRub{
+   background-color: white;
+   padding-bottom:10px;
+   margin-right:5%;
+   /*width:95%;*/
+}
+
+#BgRubSearchSimple{
+      background: url(../icons/css/biblio2/visual/bg_search.png) no-repeat; 
+}
+#BgRubSearchAdvanced{
+   background: url(../icons/css/biblio2/visual/bg_search_advanced.png) no-repeat; 
+}
+#BgRubSearchAdvancedGestion{
+   background: url(../icons/css/biblio2/visual/bg_search_advanced_gestion.png) no-repeat; 
+}
+#BgRubSearchIntegral{
+   background: url(../icons/css/biblio2/visual/bg_search_integral.png) no-repeat; 
+}
+#BgRubSearchFederated{
+   background: url(../icons/css/biblio2/visual/bg_search_federated.png) no-repeat; 
+}
+#BgRubInput{
+   margin-top:0;
+   background: url(../icons/css/biblio2/visual/bg_input.png) no-repeat;
+   width:auto !important;
+   width:100%;
+}
+#BgRubAdd{
+   background: url(../icons/css/biblio2/visual/bg_add.png) no-repeat; 
+   width:auto !important;
+   width:100%;
+}
+#BgRubInputStandard{
+   margin-top:0;
+   background: url(../icons/css/biblio2/visual/bg_input2.png) no-repeat;
+   width:auto !important;
+   width:100%;
+}
+#BgRubAddStandard{
+   background: url(../icons/css/biblio2/visual/bg_add2.png) no-repeat; 
+   width:auto !important;
+   width:100%;
+}
+#BgRubBasket{
+   background: url(../icons/css/biblio2/visual/bg_basket.png) no-repeat; 
+   
+}
+#BgRubPublish{
+   background: url(../icons/css/biblio2/visual/bg_publish.png) no-repeat; 
+   
+}
+#BgRubPrint{
+   background: url(../icons/css/biblio2/visual/bg_publish.png) no-repeat; 
+   
+}
+#BgRubRichEditor
+{
+   background: url(../icons/css/biblio2/visual/bg_rich_editor.png) no-repeat; 
+}
+#BgRubBasketFull{
+   background: url(../icons/css/biblio2/visual/bg_basket_full.png) no-repeat; 
+}
+#BgRubSearchZ3950{
+   background: url(../icons/css/biblio2/visual/bg_search_Z3950.png) no-repeat; 
+}
+
+#BgRubAdd, #BgRubInput{
+   margin-top:30px;
+   padding-bottom:0px;
+   padding-left:80px !important;
+   padding-left:0px;
+}
+
+#BgRubAddStandard, #BgRubInputStandard{
+   margin-top:0
+   padding-bottom:0px;
+   /*padding-left:80px !important;
+   padding-left:0px;*/
+   padding-left:10px !important;
+   padding-left:0px;
+   margin-right:5px;
+}
+.h1Icons{
+   text-align:left;
+   margin-left:130px;
+   color: white;   
+   font-size:1.3em;
+   padding-top:33px;
+   margin-top:0;
+}
+.h1IconsMarc{
+   text-align:left;
+   margin-left:50px;
+   color: white;   
+   font-size:1.3em;
+   padding-top:15px;
+   margin-top:0;
+}
+#h1Tools{
+   margin-left:90px;
+   padding-top:50px;
+}
+.formSearch td, .formSearch th{
+   font-size:0.9em;
+   height:60px;
+}
+
+#Step1{
+   background: url(../icons/css/biblio2/step/step1.gif) no-repeat 10px 10px white; 
+}
+#Step1:hover{
+   background: url(../icons/css/biblio2/step/step1_hover.gif) no-repeat 10px 10px white; 
+}
+#Step2{
+   background: url(../icons/css/biblio2/step/step2.gif) no-repeat 10px 10px white; 
+}
+#Step2:hover{
+   background: url(../icons/css/biblio2/step/step2_hover.gif) no-repeat 10px 10px white; 
+}
+#step3{
+   background: url(../icons/css/biblio2/step/step3.gif) no-repeat 10px 10px white; 
+}
+#Step3:hover{
+   background: url(../icons/css/biblio2/step/step3_hover.gif) no-repeat 10px 10px white; 
+}
+#Step4{
+   background: url(../icons/css/biblio2/step/step4.gif) no-repeat 10px 10px white; 
+}
+#Step4:hover{
+   background: url(../icons/css/biblio2/step/step4_hover.gif) no-repeat 10px 10px white; 
+}
+.Step, .StepNone, .StepGestion{
+   font-size: 0.9em;
+   margin:0 0 10px 130px;
+   padding:1px 0 10px 70px;
+   border-right: #e3e6f0 1px solid; 
+}
+.StepNone{
+   background:white;
+}
+.StepNoneNoPad{
+   background:white; 
+   font-size: 0.9em;
+   margin:0 0 10px 130px;
+   border-right: #e3e6f0 1px solid; 
+}
+.StepNoneNoPadNoDisplay{
+   background:white; 
+   font-size: 0.9em;
+   margin:0 0 10px 130px;
+   border-right: #e3e6f0 1px solid; 
+   display:none;
+}
+.Step h2, .StepNone h2, .StepNoneNoPad h2{
+   margin-bottom:5px;
+}
+.ContainerButton{
+   text-align:center;
+}
+#containerButtonCommunication{
+margin-left:2%;
+display:inline;
+}
+#containerButtonCommunication .CommandButton{
+margin:0;
+padding:2px;
+font-size:0.85em;
+}
+/* feuille de style biblio par défaut*/
+
+
+.document
+{
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size: 9pt;
+   vertical-align : middle;
+   background: #ffffff url(../icons/css/biblio2/visual/shadow_textfield.gif) repeat left top;
+ }
+
+.txtBox1 {
+   border-right: #464646 1px solid;
+   border-top: #464646 1px solid;
+   font-size:0.8em;
+   border-left: #464646 1px solid; 
+   border-bottom: #464646 1px solid;
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   background-color: #f9f9f9;
+   TEXT-DECORATION: none;
+}
+
+
+/* Barre de titre d'une boîte de dialogue. Ex : login */
+th.TitleBarDB
+{
+   text-align : center;
+   background-color: #8C94BF;
+   color:#505987;
+   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+   font-size:1em;
+}
+
+
+th.TitleBar2
+{
+   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+   font-size:0.9em;
+   color: #8C94BF;
+   background: #ffffff url(../icons/css/biblio2/visual/assis2.gif) repeat left top; 
+   padding-left: 2px; 
+   font-weight : bold;
+}
+/*  titre recherche lecteur réponse */
+th.TitleBar3
+{
+   text-align : center;
+   padding-left: 2px;
+   font-weight : bold;
+   color: #003399;
+   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+   font-size:1em;
+}
+
+/* Tableau fixe d'identifiants */
+
+.BorrowerIdentArray
+{
+   width: 100%;
+   height: 70%;
+   overflow: auto;
+   border: 2px;
+  /* border-style: outset; */
+   overflow-x:hidden; 
+}
+
+/* Message d'erreur */
+th.TitleBarError
+{
+   text-align : center;
+   color : white;
+   background-color: #95B0CD;
+   font-weight : bold;
+   font-size:1.2em;
+}
+
+/* THESAURUS */
+body.thesaurus
+{
+}
+.thesaurus-toolbar
+{
+   font-size:0.9em;
+   color:#8C94BF;
+   margin-bottom:10px;
+   margin-top:0px;   
+}
+
+.thesaurus-tree
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:80% !important;
+   width:100%;
+   overflow:auto;
+   height:79% !important;
+   height:87%;
+}
+.thesaurus-tree-assist
+{
+      background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:80% !important;
+   width:100%;
+   overflow:auto;
+   height:100px;
+}
+
+/* HDS */
+body.hds
+{
+}
+.hds-toolbar
+{
+   margin : 0pt;
+   background-color: #DBE1EA;
+}
+.hds-tree
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:80% !important;
+   width:100%;
+   height:70%;
+   overflow: auto;
+}
+#ToolBarTree
+{
+   margin-top:30px;
+}
+.ToolBoxTree{
+   margin-top:6px;
+   color:white;
+   display:inline;
+}
+.ToolBoxTreeCenter{
+   font-size: 0.9em;
+   background: #ffffff url(../icons/css/biblio2/table/bg_toolbox_tree_center.gif) repeat-x;
+   text-align : center;
+}
+.ToolBoxTreeLeft{
+   background: #ffffff url(../icons/css/biblio2/table/bg_toolbox_tree_left.gif) top left no-repeat;
+   height: 18px;
+   width:5px;
+}
+.ToolBoxTreeRight{
+   background: #ffffff url(../icons/css/biblio2/table/bg_toolbox_tree_right.gif) top right no-repeat;
+   height: 18px;
+   width:5px;
+}
+.ToolBoxTreeSpace{
+   width:6px;
+}
+/* TREEVIEW */
+.treeview-dir-content 
+{ 
+   padding: 0px;
+   margin: 0px;
+   margin: 0px; 
+   padding: 0px;
+   font: icon;
+   white-space: nowrap;    
+}
+.treeview-dir 
+{  
+   cursor: pointer; 
+   font: icon;
+   padding: 0px;
+   margin: 0px;
+   white-space: nowrap;    
+}
+.treeview-item 
+{ 
+   text-overflow : ellipsis; 
+   overflow : hidden; 
+   font: icon;
+   color : black;
+   font-weight: normal;
+   cursor: pointer; 
+   padding: 0px;
+   margin: 0px;
+   white-space: nowrap; 
+}
+.treeview-item-over
+{ 
+   text-overflow : ellipsis; 
+   overflow : hidden;
+   font: icon;
+   font-weight: bold;
+   color : white;
+   background-color : #a3b4bf ;
+   cursor: pointer; 
+   padding: 0px;
+   margin: 0px;   
+   white-space: nowrap;    
+}
+.treeview-item-selected
+{
+   text-overflow : ellipsis; 
+   overflow : hidden; 
+   /*color : #FF9900;*/
+   font-weight: bold;
+   cursor: pointer; 
+   padding: 0px;
+   margin: 0px;   
+   white-space: nowrap;    
+}
+
+.treeview-item-virtual,.treeview-dir-virtual,.treeview-item-virtual-over
+{
+   color:#4c5d74;
+   cursor:default;
+}
+
+
+.treeview-icon
+{
+   vertical-align: middle;
+   border: 0px;
+}
+
+/* Style générique pour les arbres */
+.tree
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:80% !important;
+   width:100%;
+   height:80%;
+   overflow: auto;
+}
+
+.treeData
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:90% !important;
+   width:95%; 
+   height:82% !important;
+   height:87%;
+   overflow: auto;
+}
+
+/* ADMINISTRATION */
+body.administration
+{
+   margin : 1pt;
+   background-color: #DBE1EA;
+}
+.administration-toolbar
+{
+ background-color: white;
+}
+.administration-tree
+{
+   background-color: white;
+}
+
+/* Modification par grille spécifique */
+th.input-field-label
+{
+   text-align : left; /* RTL */
+   font-size: 9pt;
+   padding: 1px;
+   font-weight: normal;
+   color:black;
+}
+th.input-field-label-required
+{
+   text-align : left; /* RTL */
+   font-size: 9pt;
+   padding: 1px;
+   color: #ef382a;
+   /*text-transform: uppercase;*/
+   
+}
+td.input-field-value
+{
+   text-align : left; /* RTL */
+   font-size: 0.9em;
+   padding: 1px;
+}
+
+/* Tableau récapitulatif des résultats par source */
+.source-results-pane
+{
+   width: 100%;
+   border: 0px;
+   background:#8C94BF;
+   color : white;    
+   font-size: 0.9em;
+}
+.source-results-title
+{
+   vertical-align : top;
+   font-size: 0.9em;
+   width: 25%;
+}
+.source-results-cell
+{
+   vertical-align : top;
+   font-size: 0.9em;
+   width: 25%;
+   font-weight: bold;
+}
+.source-results-count
+{
+   font-weight: normal;
+}
+
+.form-container
+{
+   margin : 3pt;
+}
+
+
+/* Titre générique pour les formulaires */
+.title-container
+{
+   margin : 0pt;
+   background:#F1F1F1;
+}
+.title-major
+{
+   text-align : left; /* RTL */
+   vertical-align : top;
+   color : #6F6F6F;
+   font-size:1.2em;
+   font-weight:bold;
+}
+.title-minor
+{
+   text-align : right; /* RTL */
+   vertical-align : top;
+   color : #6F6F6F;
+   font-size:1.2em;
+   font-weight:bold;
+}
+.title-help
+{
+   text-align : right; /* RTL */
+   width : 15px;
+   vertical-align : top;
+}
+
+
+/************************
+ * Calendar
+ ************************/
+.calendarPopup
+{
+   position:absolute;
+   visibility:hidden;
+   z-index:10;
+   margin : 3pt ;
+   color: #6699cc;
+   background-color: #ffffff;
+}
+
+.calendarTable
+{
+   border: 2px;
+   border-color: #FF9900;
+   border-style: solid;
+   border-collapse: collapse;
+}
+.calendarDayTitle
+{
+   border: 1px;
+   border-color: #FF9900;
+   border-style: solid;
+   font-size: 0.8em;
+   font-weight: bold;
+   text-align: center;
+   padding-left: 2pt;
+   padding-right: 2pt;
+   padding-top: 2pt;
+   padding-bottom: 2pt;
+}
+
+.calendarMonthTitle
+{
+   font-weight: bold;
+   font-size: 0.8em;
+}
+
+/* Commun au jour, mis dans <TD> */
+.calendarDayCell
+{
+   font-size: 0.8em;
+   color: #000000;
+   text-align: center;
+   padding-left:2pt;
+   padding-right: 2pt;
+   padding-top: 1pt;
+   padding-bottom: 1pt;
+}
+.calendarDayCellSelected
+{
+   font-size: 0.8em;
+   color: white;
+   text-align: center;
+   padding-left:2pt;
+   padding-right: 2pt;
+   padding-top: 1pt;
+   padding-bottom: 1pt;
+   background-color: #FF9900;
+   font-weight: bold;
+}
+
+/* Jour d'aujourd'hui : mis su HREF */
+.calendarDayCurrent
+{
+   font-weight: bold;
+}
+/* Jour d'aujourd'hui : mis sur HREF */
+.calendarDaySelected
+{
+   color: white;
+}
+.ImgInput{
+   vertical-align: middle;
+   margin-left:5px;
+   cursor: pointer; 
+}
+
+/*
+* information avec point d'exclamation sur page entière
+*/
+
+.Info{
+margin: 1em 25%;
+padding: 0.5em 0.5em 0.5em 0.5em;
+text-align: center;
+font-weight: bold;
+color:#8C94BF;
+height:30px;
+}
+.Info p{
+background: url(../icons/css/biblio2/step/info.gif) no-repeat white; 
+padding-left:3.7em;
+padding-top:2em;
+width:80%;
+}
+.Info a{
+margin-right:10px;
+}
+.InfoCom{
+   color:#41486c;
+   width:100%;
+}
+.InfoCom ul{
+   margin-top:0.5em;
+}
+.InfoCom li{
+padding-top:0.5em;
+   /* 
+   background: url(../icons/css/biblio2/message/li_info.gif) no-repeat top left;
+   height:25px; 
+   padding-left:2em;*/
+}
+.Info3{
+text-align: center;
+font-weight: bold;
+color:#8C94BF;
+}
+/*
+message d'erreur de l'application
+*/
+.Error{
+padding: 0.5em 0.5em 0.5em 0.5em;
+text-align: center;
+font-weight: bold;
+color:#6e6e6e;
+height:30px;
+}
+.Error p{
+background: url(../icons/css/biblio2/step/error.gif) no-repeat white; 
+padding-left:3.7em;
+padding-top:1em;
+width:80%;
+}
+/*
+* information avec point d'exclamation sur assistant
+*/
+.Info2{
+text-align:center;
+font-size:1.2em;
+}
+.Info2 p{
+font-weight: bold;
+color:#8C94BF;
+font-size: 0.9em;
+background: url(../icons/css/biblio2/step/info.gif) no-repeat white; 
+padding:10px 0 0 50px;
+margin-right:30px;
+}
+/* message avec confiramtion sur une action */
+.Confirm{
+margin: 3em 25%;
+background: url(../icons/css/biblio2/step/confirm.gif) 12px 12px no-repeat #eff1f6;
+border:1px solid #a8b3c7;
+padding: 0.5em 0.5em 1em 4em;
+text-align: center;
+color:#8c94bf;
+font-weight: bold;
+}
+.Confirm h1{
+   color:#8c94bf;
+   font-size:1.1em;
+   margin-top:15px;
+   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+/* personnalisation de la confirmation */
+#Lock{
+background: url(../icons/css/biblio2/message/lock.gif) 2px 2px no-repeat #eff1f6;
+}
+#unLock{
+background: url(../icons/css/biblio2/message/unlock.gif) 2px 2px no-repeat #eff1f6;
+}
+#Delete{
+background: url(../icons/css/biblio2/message/delete.gif) 2px 2px no-repeat #eff1f6;
+}
+#Hold{
+background: url(../icons/css/biblio2/message/hold.gif) 2px 2px no-repeat #eff1f6;
+}
+#Aside{
+background: url(../icons/css/biblio2/message/aside.gif) 2px 2px no-repeat #eff1f6;
+}
+#CashSystem{
+background: url(../icons/css/biblio2/message/cash_system.gif) 2px 2px no-repeat #eff1f6;
+margin: 0 5% 0 5%;
+}
+#AddCashSystem{
+background: url(../icons/css/biblio2/message/add.gif) 2px 2px no-repeat #eff1f6;
+margin: 0 5% 0 5%;
+}
+#DeleteCashSystem{
+background: url(../icons/css/biblio2/message/delete.gif) 2px 2px no-repeat #eff1f6;
+margin: 0 5% 0 5%;
+}
+#MesSynchronize{
+background: url(../icons/css/biblio2/message/synchronize.gif) 2px 2px no-repeat #eff1f6;
+}
+#MesAssociate{
+background: url(../icons/css/biblio2/message/assoc.gif) 2px 2px no-repeat #eff1f6;
+margin: 10% 5% 0 5%;
+}
+#MesGm{
+background: url(../icons/css/biblio2/message/gm.gif) 2px 2px no-repeat #eff1f6;
+margin: 0 5% 0 5%;
+}
+#backuploan{
+background: url(../icons/css/biblio2/message/backuploan.gif) 2px 2px no-repeat #eff1f6;
+}
+#publish{
+background: url(../icons/css/biblio2/message/publish.gif) 2px 2px no-repeat #eff1f6;
+}
+#exportNotice
+{
+background: url(../icons/css/biblio2/message/export.gif) 2px 2px no-repeat #eff1f6;
+}
+#print{
+background: url(../icons/css/biblio2/message/print.gif) 2px 2px no-repeat #eff1f6;
+}
+#CrossRight{
+   margin-top:0;
+   padding:1em;
+   height:50px;
+   background: url(../icons/css/biblio2/message/li_info.gif) 2px 10px no-repeat #eff1f6;
+}
+#CrossRight h1{
+   margin-right:5%;
+}
+#CrossRight a, #CrossRight h1{
+   display:inline;
+}
+/*
+ ROLE configuration
+*/
+
+/*arbre*/
+/*Style des cases à cocher*/
+.CheckNode{
+   vertical-align: middle;
+   padding:0;
+   margin:0 2px 0 6px;
+   border:0;
+   width:15px;
+   height:15px;
+}
+
+
+
+/*noeud contenant un boutton*/
+.ButtonNode{
+   vertical-align: middle;
+   padding:0;
+   margin:0 2px 0 6px;
+}
+
+/* interface */
+#conteneur {
+   position: absolute;
+   padding:0;
+   width: 98%;
+   height:92%;
+}
+
+#gauche {
+   position: absolute;
+   left:0;
+   margin-top:50px !important;
+   margin-top:56px;
+   padding-top:5px;
+   width: 95%;
+   overflow: auto;
+   overflow-x:hidden;
+   /*height:465px;*/
+   height:89% !important;
+   height:93%;
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+}
+
+#titreGauche{
+   position: absolute;
+   left:0;
+   margin-top:5px;
+   width: 95%;
+   height:30px;
+}
+
+#titreGauche h1
+{
+   margin-top:0;
+}
+
+#droite {
+   position: absolute;
+   right:0;
+   width: 250px;
+}
+
+#pied {
+   height: 20px;
+   background-color: white;
+   margin:0;
+   margin-left: auto;
+   margin-right: auto;
+   padding:0;
+   text-align: center;
+}
+
+.CentredFrame {
+   width:95%;
+   height:95%;
+   margin-top: -15px;
+   padding:0;
+   border:1px solid #CDCDCD;
+}
+
+
+#centre {
+   padding:0;
+   width:auto;
+}
+
+.arbreGauche {
+   margin-top:  0px;
+   margin-left: 0px;
+   margin-bottom: 10px;
+   width: 350px; 
+   height:88%;
+   /*border:1px solid #CDCDCD;*/
+   overflow: auto;
+}
+
+.description {
+   position: absolute;
+   top:0;
+   padding:0;
+   width: 100px;
+   margin-top: 40px;
+   margin-left: 360px;
+   margin-right: 0px;
+}
+
+.menugauche {
+   list-style-type: none;
+   margin: 0 0 0 5px;
+   padding:0;
+   width:165px;
+}
+
+.menugauche li {
+   margin-bottom: 5px;
+}
+
+.menugauche li:hover {
+   color : white;
+   background-color : #00416d ;
+}
+
+.menugauche a {
+   min-width: 100%;
+}
+
+.menugauche a:hover {
+   color : white;
+   background-color :  #00416d;
+}
+
+.RoleNameSelected {
+   min-width: 100%;
+   color : white;
+   background-color : #00416d;
+}
+
+.RoleNameSelected:visited  {
+   min-width: 100%;
+   color : white;
+   background-color : #00416d;
+}
+
+.configToolBar {
+   position: absolute;
+   top:0;
+   left:0;
+}
+
+/*
+* Liste d'index (assistant)
+*/
+
+.BgRub2{
+   background-color: white;
+}
+#BgRubIndexList{
+   background: url(../icons/css/biblio2/visual/bg_listindex.png) no-repeat; 
+}
+.h1Assit{
+   text-align:center;
+   color: white;   
+   font-size:1.2em;
+   padding-top:40px;
+   margin-top:0;
+}
+#IndexSearch{
+   text-align:center;
+   margin-top:40px;
+}
+.OccurenceTitle{
+   color:#585858;
+   font-size:0.9em;
+   clear:both;
+}
+.IndexSearchTitle {
+   color:#585858;
+   font-weight: bold;
+}
+#assistIndexPageUp{
+   float:left;   
+   font-size:0.9em;
+   color: #99ADCA;
+}
+#assistIndexPageUp img{
+   margin-left:5px;
+   margin-right:5px;
+}
+#assistIndexPageDown{
+   float:right;   
+   font-size:0.9em;
+   color: #99ADCA;
+}
+#assistIndexPageDown img{
+   margin-right:20px;
+   margin-left:4px;
+}
+/*
+* fin Liste d'index
+*/
+
+
+
+/*
+* thésaurus (assistant)
+*/
+#BgRubIndexThesaurus{
+   background: url(../icons/css/biblio2/visual/bg_listthesaurus.png) no-repeat -5px -15px; 
+   margin-top:0;
+   padding-top:0;
+}
+.descriptor-thesaurus{
+   padding:1em;
+   font-size:1.1em;
+   font-weight:bold;
+}
+/*
+.thesaurus-left{
+   padding:0;
+   margin:0;
+   width:250px;
+   background: url(../icons/css/biblio2/visual/bg_thesaurusleft.png) no-repeat; 
+   padding-left:20px;
+   float:left;
+}
+
+.ThesaurusGeneric{
+   height:50px;
+   margin-bottom:5px;
+   margin-top:5px;
+   color:#8594b0;
+   background: url(../icons/css/biblio2/visual/bg_thesaurus_broader.png) -30px -35px  no-repeat; 
+}
+.ThesaurusGeneric:hover{
+   height:50px;
+   background: url(../icons/css/biblio2/visual/bg_thesaurus_broader_on.png) no-repeat; 
+}
+.ThesaurusTerm{
+   height:90px;
+   background: url(../icons/css/biblio2/visual/bg_thesaurus_terms.png)  -30px 0  no-repeat; 
+}
+.ThesaurusTermSelect{
+ float:right;
+ margin-right:0;
+ font-size:0.8em;
+ }
+.ThesaurusTermText{
+float:left;
+margin-left:10px;
+margin-top:30px;
+font-size:0.8em;
+display:inline;
+}
+
+.ThesaurusGenericText{
+position:absolute;
+margin-left:0px !important;
+margin-left:-60px;
+margin-top:40px;
+font-size:0.8em;
+color:#c2d1ed;
+}
+.ThesaurusSpecificText{
+position:absolute;
+margin-top:-1px;
+margin-left:0px !important;
+margin-left:-60px;
+font-size:0.8em;
+color:#c2d1ed;
+}
+.ThesaurusTerm p{
+color:white;
+font-weight: bold;
+display: inline;
+}
+.ThesaurusTermIn{
+ color:#445f91;
+ font-size:1.1em;
+ font-weight:bold;
+ display: inline;
+ width:150px;
+margin-left:60px;
+padding-top:30px;
+ }
+  .textThesaurusTermIn
+  {
+ margin-top:30px; 
+   background-color: #E7E7E7;
+   border:0;
+   color:black;
+  }
+.ThesaurusSpecific{
+   height:150px;
+   color:#8594b0;
+   background: url(../icons/css/biblio2/visual/bg_thesaurus_narrower.png) -25px 0 no-repeat;  
+   margin-bottom:5px;
+   margin-top:5px;
+}
+.ThesaurusSpecific:hover{
+   background: url(../icons/css/biblio2/visual/bg_thesaurus_narrower_on.png) no-repeat; 
+}
+
+.ThesaurusSpecificIn{
+margin-left:60px;
+padding-top:20px;
+overflow:scroll;
+overflow-x:hidden;
+height:130px !important;
+height:150px;
+}
+.ThesaurusGenericIn{
+   margin-left:60px;
+padding-top:20px;
+}
+.ThesaurusSeeAlso{
+text-align:center;
+width:200px;
+height:150px;
+background: url(../icons/css/biblio2/visual/bg_thesaurus_associated.png) 0 -85px no-repeat; 
+padding-top:110px;
+}*/
+.ThesaurusSeeAlso p{
+   margin:0;
+   padding:0;
+   padding-top:20px;
+   font-size:11px;
+   color:#c2d1ed;
+}
+.ThesaurusSeeAlso:hover{
+background: url(../icons/css/biblio2/visual/bg_thesaurus_associated_on.png) no-repeat; 
+}
+.ThesaurusSynonym{
+   text-align: center;
+   width:200px;
+   height:155px;
+   background-color: #e7e7e7;
+   margin-top:0px;
+}
+.ThesaurusSynonym p{
+   margin:0;
+   padding:0;
+   padding-top:30px;
+   color:#858585;
+   font-size:11px;
+}
+.ThesaurusUsedFor{
+   text-align: center;
+   width:200px;
+   height:150px;
+   background-color: #e7e7e7;
+   margin-top:0px;
+}
+.ThesaurusUsedFor p{
+   margin:0;
+   padding:0;
+   padding-top:10px;
+   color:#858585;
+   font-size:11px;
+}
+
+#thesaurus-right{
+      float:left;
+}
+#narrower-hierarchie{
+   position:absolute;
+   height:73px;
+   width:1px;
+   border: 1px;
+   background-color: #ffa817;
+   margin-left:150px;
+}
+#broader-hierarchie{
+   position:absolute;
+   width:1px;
+   height:62px;
+   border: 1px;
+   background-color: #ffa817;
+   margin-left:125px;
+}
+.thesaurusReload
+{
+   position:absolute;
+   right:5px;
+   top:5px;
+}
+
+/*
+* fin thésaurus (assistant)
+*/
+
+/*
+* assistant liste simple
+*/
+#BgRubList{
+   background: url(../icons/css/biblio2/visual/bg_list.png) no-repeat; 
+}
+#BgRubDatation{
+   background: url(../icons/css/biblio2/visual/bg_datation.png) no-repeat; 
+}
+#BgRubListGed{
+   background: url(../icons/css/biblio2/visual/bg_list_ged.png) no-repeat; 
+}
+#BgRubHelp{
+   margin-top:0;
+   padding-top:0;
+   background: url(../icons/css/biblio2/visual/bg_help.png) no-repeat; 
+}
+#BgRubHelp h1{
+   padding-top:40px;
+   margin-top:0;
+   margin-bottom:40px;
+   color:white;
+}
+
+#BgRubHelp p {
+ padding:10px;
+ text-align:justify;
+}
+.listSelect
+{
+   margin-top:25px;
+}
+#listSingleValue, #listManyValues{
+display:inline;
+margin-top:-5px;
+margin-bottom:10px;
+}
+#btnSelect{
+   display: inline;
+   margin-right:20px;
+}
+#btnRoll{
+display:block;
+margin-top:10px;
+margin-bottom:10px;
+}
+#EraseCurrentMultiValue{
+visibility: hidden;
+display:inline;
+}
+#EraseCurrentSingleValue{
+visibility: hidden;
+display:inline;
+}
+#listSingleValue{
+   border:1px solid #f88020;
+   color:black;
+   background: white;
+   width:350px;
+   padding:5px 20px 5px 20px;
+   text-align: justify;
+
+}
+#CurrentValueContainer{
+vertical-align: top;
+}
+/*
+* fin assistant liste simple
+*/
+
+/*
+* assistant liste table liée
+*/
+#BgRubListLink{
+   background: url(../icons/css/biblio2/visual/bg_list_link.png) no-repeat; 
+}
+#btnCreate{
+   display:inline;
+}
+/*
+* fin assistant liste table liée
+*/
+
+
+/*
+* Mise en forme des services
+*/
+
+/*
+*
+*  COMMUNICATION
+*
+*/
+
+#BgRubCommunication{
+   background: url(../icons/css/biblio2/visual/bg_list_communication.png) no-repeat;
+   text-align: center;
+   font-weight: bold;
+   color:#6570a8;
+   height:50px;
+   padding-top:10px;
+   line-height:35px;
+}
+
+#BgRubCommunicationQuery{
+   background: url(../icons/css/biblio2/visual/bg_list_communication_query.png) no-repeat;
+   text-align: center;
+   font-weight: bold;
+   color:#6570a8;
+   height:85px;
+   padding-top:10px;
+   line-height:35px;
+}
+
+#BgRubCommunicationTransfer{
+   background: url(../icons/css/biblio2/visual/bg_list_transfer.png) no-repeat;
+   text-align: left;
+   height:85px;
+   font-weight: bold;
+   color:#6570a8;
+   padding-top:20px;
+   padding-left:100px;
+   margin-top:-14px;
+}
+
+#gridInputBorrower{
+   overflow:auto;
+   height:280px;
+}
+#gridUpdateBorrower{
+   overflow:auto;
+   height:280px;
+}
+.imgBorrower{
+   vertical-align: middle;
+   border: 0;
+}
+.postIt, .postItOff{
+   color:#a87f48;
+   background:#fff8ef;
+   border:1px solid #e3d5c3;
+   text-align:center;
+   margin: 0.5em 0.5%;
+   font-weight: bold;
+   position:absolute;
+   font-size:0.8em;
+   padding:1.5em;
+   filter:alpha(opacity=90);
+   -moz-opacity:0.9;
+   background: url(../icons/css/biblio2/message/postitoff.gif) no-repeat #fff8ef; 
+   z-index:10;
+   cursor: move;
+}
+.postItOff{
+   filter:alpha(opacity=60);
+   -moz-opacity:0.6;
+   z-index:10;
+   cursor: move;
+   background: url(../icons/css/biblio2/message/postit.gif) no-repeat #fff8ef; 
+}
+
+#infoBorrower ul{
+  color:red;   
+  list-style:none;
+  text-align:center;
+  font-size:1.2em;
+  padding:0;
+  margin:0;
+}
+
+#infoBorrower ul li{
+  padding:0.2em;
+  margin:0;
+}
+
+#gridInputComRights{
+   overflow:auto;
+   height:300px;
+   text-align: center;
+   margin-left:50px;
+}
+.TitleCommunication{
+   margin-right:5em;
+   color:white;
+   vertical-align:top;
+}
+/*
+* Saisie mise en valeur d'un groupe 
+*/
+th.TitleBarInput{
+   text-align : left;
+   background: #ffffff url(../icons/css/biblio2/visual/assis2.gif) repeat left top; 
+   padding: 10px;
+   padding-left:3px;
+   font-weight : bold;
+   font-size:1.1em;
+   color: #6f6f6f;
+   text-transform: uppercase;
+}
+th.TitleBarInputnLines{
+   text-align : left;
+   background: #E9E9E8  repeat left top; 
+   padding: 10px;
+   padding-left:3px;
+   font-weight : bold;
+   font-size:1.1em;
+   color: #6f6f6f;
+   text-transform: uppercase;
+}
+
+/*
+*
+*/
+.rightClickContainer{
+position:absolute;
+background-color: white;
+border: 1px solid #9d9da1;
+width:240px;
+color:black;
+cursor:default;
+z-index:100;
+display: none;
+padding:0.2em;
+}
+.rightClickContainer ul
+{   
+border-bottom: 1px solid #9d9da1;
+list-style: none;
+padding:0 0 1em 0;
+margin:0;
+}
+.rightClickContainer li
+{   
+   font-size:0.85em;
+   color: Black;
+   margin-bottom:0.2em;
+   width:100%;
+}
+.rightClickContainer li:hover{
+   background-color: #a3b4bf;
+   color:white;
+}
+.rightClick,.rightClick:link,.rightClick:hover,.rightClick:visited
+{
+   color: Black;
+   width:100%;
+   line-height:1.6em;
+   padding-left:1em;
+}
+.rightClick:hover{
+   background-color: #a3b4bf;
+   color:white;
+}
+
+/* HLS */
+body.hls
+{
+   margin : 1pt;
+   background-color: #DBE1EA;
+}
+.hls-toolbar
+{
+   margin : 0pt;
+   background-color: #DBE1EA;
+}
+.hls-tree
+{
+   background:none;
+}
+
+/* file choose */
+.fileChooser-tree
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   min-width:350px;
+   width:350px;
+   min-height:150px;
+   height:150px;
+}
+
+/* style pour l'assistant sur liste hierarchique */
+
+.hierarchized-style
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:300px;
+   height:300px;
+   overflow: auto;
+}
+   /* 
+   habillage du module DCM   
+    */
+
+#toolBarDcm, #toolBarDiaporama{
+width:93px;
+height:450px;
+filter:alpha(opacity=90);
+-moz-opacity:0.9;
+}
+#toolBarDcm input, #toolBarDiaporama input{
+background: #edf0f3;
+border:1px solid #716f64;
+margin:0 0.5em;
+}
+.toolBarZoom{
+   margin-left:10px;
+}
+#zoomToolBg{
+/*margin-left:50px !important;
+margin-left:0px;*/
+display:inline-block;
+height:22px;
+background: url(../icons/css/biblio2/dcm/toolbar/zoom_bg.gif) no-repeat 8px top; 
+}
+.zoomToolCursor2{
+   width:24px;
+   height:22px;
+   background: url(../icons/css/biblio2/dcm/toolbar/cursor.gif) no-repeat top;
+cursor: w-resize;
+   z-index:20;
+}
+#toolBarDcm p, #toolBarfreeZoom{
+   font-size:0.8em;
+   color:#7a7a7a;
+   margin:0.2em;
+}
+#toolBarlabel{
+display:block;
+padding-left:2em;
+padding-top:3px;
+}
+.toolBarDcm, .toolBarDcmOff, .toolBarDiaporama, .toolBarDiaporamaOff{
+   border:0;
+      margin: 0.5em 0.5%;
+   font-weight: bold;
+   position:absolute;
+      filter:alpha(opacity=90);
+   -moz-opacity:0.9;   
+   z-index:10;
+
+}
+.toolBarDcm, .toolBarDiaporama{
+      filter:alpha(opacity=60);
+   -moz-opacity:0.6;
+      border:0;
+}
+#toolBarDcmDrag, #toolBarDiaporamaDrag{
+   width:93px;
+   height: 15px;
+   cursor: move;
+   background: url(../icons/css/biblio2/dcm/toolbar/toolbar_bg_top.gif) no-repeat left top; 
+}
+#toolBarContain{
+      background: url(../icons/css/biblio2/dcm/toolbar/toolbar_bg_bottom.gif) no-repeat left top; 
+      margin:0;
+      padding:0;
+      height:440px;
+}
+#toolBarDcmToggle, #toolBarDiaporamaToggle, #toolBarToggle{
+margin:2px 5px 0 0;
+padding:0;
+cursor:hand;
+}
+#toolBarDcmToggle img, #toolBarDiaporamaToggle img{
+position:absolute;
+margin-left:70px;
+margin-top:6px;
+}
+#toolBarToggle img{
+position:absolute;
+margin-left:187px;
+margin-top:2px;
+}
+#toolBarfreeZoom{
+   width:93px;
+   padding-top:10px;
+   text-align:center;
+}
+.imgZoom{
+            margin:0;
+         padding:0;
+      margin-top:20px;
+         padding-left:30px;
+
+}
+.hrToolBarDcm{
+clear:both;
+margin:2px 5px;
+padding:0;
+width:80px;
+border-bottom: 1px solid #e8e8e8;
+}
+.toolBarRotate img{
+   margin-left:3px;
+      border:0;
+}
+
+#toolBarfreeRotate{
+      width:93px;
+   padding-top:5px;
+   text-align:center;
+}
+.dcmFlip {
+   text-align:center;
+}
+.dcmFlip a {
+padding-bottom:10px;
+      }
+.DcmTool{
+      background: url(../icons/css/biblio2/dcm/toolbar/bg_img.gif) repeat top left;
+}
+.imgDcmToolContainer{
+width:100%;
+text-align:center;
+margin:5% 0;
+}
+.imgDcmToolContainer img{
+border: 0.5em solid white;
+}
+
+.imgDcmTool, .imgDcmToolOff{
+   position:absolute;
+   z-index:5;
+         cursor: move;
+            filter:alpha(opacity=100);
+   -moz-opacity:1;
+}
+.imgDcmToolOff{
+   filter:alpha(opacity=60);
+   -moz-opacity:0.6;
+}
+.dcm-tree
+{
+   background-color: #f7f7f7;
+   border:1px solid #d7d7d7;
+   padding:1em 1em 1em 0.5em;
+   margin-top:0;
+   margin-left:1em;
+   width:80% !important;
+   width:100%;
+   height:90%;
+   overflow: auto;
+}
+/*
+* DIAPORAMA
+*/
+#Left, #LeftDocument{
+   float:left;
+   background-color:#f2f2f2;
+   overflow:auto;
+   height:85%;
+   width : 300px;
+}
+#Right,#Right2{
+   position:absolute;
+   top:50px;
+   left:360px;   
+   width:50%;
+   height:50%;
+}
+/*Left Frame*/
+
+.imgReport{
+filter:alpha(opacity=80);
+-moz-opacity:0.8;
+border:5px solid #cad3de;
+}
+.imgReportNone{
+border: 5px solid white;
+}
+#Pager{
+text-align: center;
+background-color: white;
+font-size:0.9em;
+color: #99ADCA;
+height:40px;
+padding-top:15px;
+width:200px;
+}
+.pagerReport{
+text-align: center;
+background-color: #f6f6f6;
+font-size:0.9em;
+color: #99ADCA;
+height:40px;
+padding-top:15px;
+padding-bottom:15px;
+width:100%;
+}
+/*Main Frame */
+
+#DiapoContainer{
+   background: url(../icons/css/biblio2/dcm/diaporama/diapo_bg_main.gif); 
+   border:1px solid #717171;
+   padding:20px;
+}
+.ImageContainer{
+        background: #bfbfbf url(../icons/css/biblio2/dcm/diaporama/diapo_bg_photo.gif) no-repeat  50%;
+      width: 100%;
+      height:100%;
+}
+.ImageContainer img{
+   border: 0.5em solid white;
+}
+
+.ImageContainertd{
+   vertical-align:middle;
+   text-align:center;
+}
+/*
+DIAPORAMA DCM
+*/
+
+#diaporamaTools{
+         padding:6px;
+         margin: 10px 0px 0 10px;
+         float:right;
+}
+.scale-image{
+   margin:0;
+       display: table-cell;
+    text-align: center;
+    border: 0.1em solid #f6f6f6;
+    color:#b3b3b3;
+   font-size: 0.8em;
+    vertical-align: middle;
+}
+.scale-image * {
+    vertical-align: middle;
+}
+.scale-image span {
+    display: inline-block;
+    height: 100%;
+}
+#track1{
+   width: 188px; 
+   background: url(../icons/css/biblio2/dcm/toolbar/scaler_slider_track.gif) center left;
+   height:18px;
+   margin: 10px 52px 0 10px;
+   float:left;
+}
+#toolBarLeft{
+   width: 300px;
+   background: url(../icons/css/biblio2/dcm/toolbar/bg_toolbar_left.gif) repeat-y;
+   height:36px;   
+}
+#toolBarLeft2{
+   width: 300px;
+}
+
+#handle1{
+cursor: w-resize;
+width: 18px;
+height: 18px;
+}
+#PagerDcm{
+float:left;
+margin-top:10px;
+margin-left:2px;
+}
+#PagerDcm span{
+color:#b3b3b3;
+font-size: 0.9em;
+}
+#DcmOnglets{
+height:23px;
+margin-bottom:15px !important;
+margin-bottom:0;
+}
+
+
+.TabViewDcm{
+height:23px;
+   margin-top:15px;
+   color:white;
+}
+.TabViewSelectedLinkDcm{
+   color:#b3b3b3;
+}
+.TabViewSelectedLinkDcm:hover {
+   color:#b3b3b3;
+}
+.TabViewSelectedLinkDcm:visited {
+   color:#b3b3b3;
+}
+.TabViewSelectedLinkDcm:link{
+   color:#b3b3b3;
+}
+.TabViewSelectedCenterDcm{
+   font-size: 0.9em;
+   background: #ffffff url(../icons/css/biblio2/dcm/toolbar/table/bg_tabview_selected_center.gif) repeat;
+   text-align : center;
+   padding:0 0.5em;
+   height:23px;
+}
+.TabViewSelectedleftDcm{
+   background: #ffffff url(../icons/css/biblio2/dcm/toolbar/table/bg_tabview_selected_left.gif) top left;
+   height: 23px;
+   width:6px;
+}
+.TabViewSelectedrightDcm{
+   background: #ffffff url(../icons/css/biblio2/dcm/toolbar/table/bg_tabview_selected_right.gif) top right;
+   height: 23px;
+   width:6px;
+}
+.TabViewNotSelectedCenterDcm{
+   font-size: 0.9em;
+   color : #bfbfbf;
+   background: #ffffff url(../icons/css/biblio2/dcm/toolbar/table/bg_tabview_center.gif) repeat;
+   text-align : center;
+      padding:0 0.5em;
+      height:23px;
+}
+.TabViewNotSelectedleftDcm{
+   height: 23px;
+   width:6px;
+   background: #ffffff url(../icons/css/biblio2/dcm/toolbar/table/bg_tabview_left.gif) top left;
+}
+.TabViewNotSelectedrightDcm{
+   height: 23px;
+   width:6px;
+   background: #ffffff url(../icons/css/biblio2/dcm/toolbar/table/bg_tabview_right.gif) top right;
+}
+.TabViewSpaceDcm{
+   width:2px;
+   height:23px;
+}
+.TabViewNotSelectedTextDcm{
+   color : #bfbfbf;
+}
+.TabViewNotSelectedLinkDcm{
+   color:#bebebe;
+   }
+   
+   .TabViewNotSelectedLinkDcm:hover {
+   color:#626262;
+}
+.TabViewNotSelectedLinkDcm:visited {
+   color:#bebebe;
+}
+.TabViewNotSelectedLinkDcm:link{
+   color:#bebebe;
+}
+
+.xml-tree
+{
+   background-color: #f2f2f2;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:80% !important;
+   width:100%;
+   height:70%;
+}
+/*
+FIN DIAPORAMA DCM
+*/
+
+/*
+view report
+*/
+
+#toolBarReport
+{
+   width: 100%;
+   background: url(../icons/css/biblio2/dcm/toolbar/bg_toolbar_report.gif) repeat-x;
+   height:36px;   
+   margin-bottom:1em;
+}
+#TitleContainer
+{
+background:#ededed;
+text-align:center;
+margin:0;
+padding:5px;
+border-bottom:1px solid #c4c4c4;
+color:#9a9a9a;
+}
+/*
+fin view report
+*/
+#countMultiTiff{
+font-size: 0.9em;
+color:#9a9a9a;
+padding:0.5em;
+}
+#toggleDcmOff,.toggleDcmOff{
+background: url(../icons/css/biblio2/dcm/action/toggle_dcm_off.gif);
+width:10px;
+height:395px;
+position:absolute;
+margin-left:-10px;
+cursor:hand;
+}
+#toggleDcmOn,.toggleDcmOn{
+background: url(../icons/css/biblio2/dcm/action/toggle_dcm_on.gif);
+width:20px;
+height:300px;
+position:absolute;
+right:0;
+cursor:hand;
+}
+.toggleDcmOff{
+/*float:left;*/
+position:fixed !important;
+position:absolute;
+right:305px;
+z-index:105;
+}
+.toggleDcmOn{
+position:fixed !important;
+position:absolute;
+right:0px;
+
+}
+.loadingGmRun{
+background:url(../icons/css/biblio2/tree/wait.gif) no-repeat;
+color:#ff8a1f;
+margin-top:1em;
+padding-left:1em;
+width:250px;
+}
+.loadingGmEnd{
+background:url(../icons/css/biblio2/message/ico_valid.gif) no-repeat;
+color:#375695;
+margin-top:1em;
+padding-left:1em;
+width:250px;
+}
+.searchAssoc {
+margin:0;
+padding:0;
+background: url(../icons/css/biblio2/visual/bg_list_communication.png) no-repeat;
+}
+.searchAssoc h1{
+color:white;
+padding-top:1em;
+}
+.searchAssoc label{
+font-size:0.85em;
+margin:0;
+}
+.getTerm{
+
+}
+.captTerm{
+   border: #F88020 1px solid;
+   color:black;
+   background-color: white;
+}
+.captTermIndex{
+   width: 80%;
+   height: 50px;
+   overflow: auto;
+   border: #F88020 1px solid;
+   color:black;
+   background-color: white;
+   overflow-y:scroll;
+   overflow-x:hidden;
+   text-align:left;
+   font-size:0.8em;
+}
+.RetrieveHtmlData,.RetrieveHtmlDataBlock{
+   right:10px;
+width:35%;
+height:50%;
+color:#d09f5d;
+filter:alpha(opacity=95);
+-moz-opacity:0.95;
+z-index:100;
+margin-right:5px;
+}
+.RetrieveHtmlDataBlock{
+height:200px;
+}
+.RetrieveHtmlData th, .RetrieveHtmlData td, .RetrieveHtmlDataBlock th, .RetrieveHtmlDataBlock td{
+   color:#88622f;
+   text-align:left;
+    font-size:0.85em;
+}
+.RetrieveHtmlData th, .RetrieveHtmlDataBlock th{
+    font-size:0.9em;
+    pleft:0.5em;
+}
+.RetrieveHtmlDataDiv{
+     overflow-y:scroll;
+   overflow-x:hidden;
+  width:100%;
+  /*height:100% !important;*/
+height:310px;
+margin-top:0px;
+ padding:0.1em;
+ }
+.RetrieveHtmlData table, .RetrieveHtmlDataBlock table{
+ border:1px solid #e3d5c3;
+height:100%;
+  width:100%;
+ background:#fff8ef;
+ }
+.InputLinkForm{
+ float:left;
+ }
+ /* pour view thumb include */
+ 
+ .dcmViewContainer{
+ float:right;
+ margin-right:1em;
+ clear:both;
+ background:#c5c5c5;
+ border-bottom:1px solid #c5c5c5;
+ }
+ .gedContainer{
+ margin-left:5px;
+ border:1px solid #c5c5c5;
+ }
+
+.excludedDateLabel{
+   font-size:0.9em;
+   color: #8C94BF;
+   font-weight : bold;
+ }
+
+
+.hierarchy-view-left
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:500px;
+   height:500px;
+   overflow: auto;
+}
+
+.hierarchy-view-right
+{
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   width:500px;
+   height:500px;
+   overflow: auto;
+}
+
+/* textbox dans une liste d'items */
+.listTextBox,.listTextBoxEdit
+{
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.95em; 
+   border: #FFFFFF 0px solid; 
+   color:black;
+   background-color: transparent;
+}
+/* textbox en édition dans une liste d'items, ne fonctionne pas avec IE  */
+/*
+.listTextBoxEdit:focus
+{
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.95em; 
+   border: #FFFFFF 0px solid;
+   color:black;
+   background-color: #ffffff;
+}
+*/
+.listTextBoxEditFocus
+{
+   font-family:  Arial, Verdana, Tahoma, Geneva, Helvetica sans-serif;
+   font-size:0.95em; 
+   border: #FFFFFF 1px solid;
+   color:black;
+   background-color: #ffffff;
+}
+/* Bouton 2states */
+.buttonEnabled
+{
+  /* for IE */
+  filter:alpha(opacity=100);
+  /* CSS3 standard */
+  opacity:1;
+  /* for Mozilla */
+  -moz-opacity:1;  
+  cursor: pointer;
+  border-style: none;
+}
+/* Bouton 2states */
+.buttonDisabled
+{
+  /* for IE */
+  filter:alpha(opacity=30);
+  /* CSS3 standard */
+  opacity:0.3;
+  /* for Mozilla */
+  -moz-opacity:0.3;  
+  cursor : url("icons/css/biblio2/cursor/noclick.cur"), default;
+  border-style: none;
+}
+
+/* Masque pour l'attente bloquante */
+#sysDisableMask
+{
+   visibility : hidden;
+   position:absolute;
+   left    : 0;
+   top     : 0;
+   width   : 2048px;
+   height  : 2048px;
+   opacity : 0.1;
+   filter:alpha(opacity=10);
+   -moz-opacity:0.1;  
+   z-index : 2000;
+   background-color: black;
+}
+/* Message pour l'attente bloquante */
+#sysWaitMask
+{
+   visibility : hidden;
+   background: url(../icons/css/biblio2/visual/loader.gif) no-repeat; 
+   position:absolute;
+   left: 50%;
+   top: 20%;
+   width: 250px !important;
+   width: 300px;
+   height: 100px !important;
+   height: 200px;
+   margin-left: -150px; 
+   border:1px solid #819CBC;
+   color:white;
+   font-weight: bold;
+   padding:70px 0px 0px 30px;
+   z-index: 3000; /* plus grand que sysDisableMask */
+}
+   
+   
+/* EBOOK Interface */
+
+
+.ebook-outer-tree-container
+{
+   position: relative;
+   float: left;
+   display: block;
+   background-color: #f1f4f6;
+   width: 25%;
+   height: 85%;
+}
+
+.ebook-tree-container
+{
+   display:block;
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   overflow: scroll;
+   height:100%;
+}
+
+.ebook-thumb-container
+{
+   position:relative;
+   float:left;
+   display:block;
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   width:20%;
+   height:85%;
+   overflow: auto;
+   text-align: center;
+}
+
+.photo_ebook_thumb
+{
+   border-style:solid;
+   border-width:3px;
+   border-color:#f1f4f6;
+}
+
+.photo_ebook_thumb_selected
+{
+   border-style:solid;
+   border-width:3px;
+   border-color:lightblue;
+}
+
+/* Vue imagette - Zone d'affichage de l'image*/
+.ebook-thumb-image-page-view
+{
+   position: relative;
+   float: left;	
+   display: block;
+   margin-left: 4px;
+   border:1px solid #dee4ed;
+   width: 78%;
+   height: 85%;
+   overflow: auto;
+   text-align: center;
+}
+
+/* Style appliqué sur l'élément(text) */
+.tree-element
+{
+   font-weight: normal;
+   color: #3d5f96;
+   vertical-align: top;
+}
+
+/* Style appliqué sur l'élément sélectionné */
+.selected-tree-element
+{
+   font-weight: bold;
+}
+
+.ebook-page-list-container
+{
+   position:relative;
+   float:left;
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   /*padding:1em 1em 1em 1em;*/
+   margin-top:20px;
+   width:99%;
+   height:85%;
+   overflow: auto;
+   display:block;
+}
+
+.ebookBlock {
+	margin-left:15px;
+}
+	
+.ebook-page-list
+{
+	/*
+   background-color: #f1f4f6;
+   border:1px solid #dee4ed;
+   padding:1em 1em 1em 1em;
+   margin-top:0;
+   height:100%;
+   overflow: auto;
+   display:block;
+			*/
+   width:90%;
+   /*width: 300px;*/
+      
+}
+
+.ebook-img-2-page-label 
+{
+   position: relative;
+   float: left; 
+   height: 20px; 
+   width: 49%;
+}   
+
+.ebook-img-2-page-image 
+{
+   position: relative;
+   float: left; 
+   border:1px solid #dee4ed;
+   height: 80%; 
+   width: 49%;
+   text-align: right;
+   overflow-y: auto;
+}
+
+.ebook-img-page 
+{
+   position: relative;
+   float:left;	
+   border:1px solid #dee4ed;
+   height: 85%; 
+   width: 99%;
+   overflow: auto;
+}
+
+.ebook-div-raa-zoom
+{
+   display:none;
+   position:absolute;
+   top:200px;
+   left:300px;
+   background-color:transparent;
+   width:600px;
+   height:400px;
+   border:5px solid #dee4ed;
+   cursor:pointer
+   /*padding:1em 1em 1em 1em;*/
+   /*margin-top:0;*/
+   /*overflow: auto;*/
+      
+}
+
+
+div#viewDefault 
+{
+   color: black;
+   background-color: #EAEEFF;
+   border-left: 1px solid Gray;
+   border-right: 1px solid Gray;
+   margin: 0 1;
+   width: 900px;
+}
+
+.viewDefault-ParentField 
+{
+   color: red;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.viewDefault-FieldValue 
+{
+   text-align: left;
+   width: 200px;
+}
+
+.viewDefault-FieldLabel 
+{
+   float: left;
+   width: 300px;
+   margin-Left: 15px;
+}
+
+.viewDefault-ChildFieldIcon 
+{
+   float: top;
+   margin-top: -5px;
+   width: 3.5px;
+}
+
+.viewDefault-Div 
+{
+   background: #E6EDF7 none repeat scroll 0 0;
+   border: 1px dashed #B5CCE7;
+   color: #7B8FAC;
+   margin: 0.3em 0 0.3em 0.3em;
+   padding: 0.3em;
+   width: 95%;
+   height:auto;
+}
+
+.viewDefault-DivCursor 
+{
+   cursor: pointer;
+   padding-left: 4px;
+}
+
+.GenericSearchBgRub{
+   background-color: white;
+   margin-top:10px;
+   padding-bottom:10px;
+   /*width:95%;*/
+}
+
+.h1SearchIcons{
+   text-align:left;
+   margin-left:90px;
+   color: white;  
+   font-size:1.2em;
+   padding-top:80px;
+   margin-top:0;
+}
+
+.sysModalPopup
+{
+   visibility: hidden;
+   position:absolute;
+   left:15%;
+   top:15%;
+   z-index:10000;
+   background-color:white;
+   border: #565757 2px solid;
+   width:70%;
+   height:70%;
+}
+.sysModalPopupHeader
+{
+   height: 20px;
+   background-color: #565757;
+   line-height: 20px;
+   font-size:0.9em;
+   color:white;
+   font-weight: bold;
+   padding: 1;
+}
+.sysModalPopupHeaderCell
+{
+   font-size:0.9em;
+   color:white;
+   font-weight: bold;
+}
+.sysModalPopupBody
+{
+   width: 98%;
+   height: 70%;
+   overflow: auto;
+   border:0;
+   /*border-bottom: 1px solid #e1e1e1;*/
+   overflow-y:scroll;
+   overflow-x:hidden;
+}
+.sysModalPopupFooter
+{
+   position:relative;
+}
+
+.fixedHeader tr {
+ position: relative;
+ height: auto;
+ background-color:scrollbar;
+ top: expression( this.parentNode.parentNode.parentNode.scrollTop + 'px' );
+}

@@ -1,0 +1,226 @@
+DIV#zone-menu {
+  background-color: #009CA9;
+}
+
+
+ul#css3menu1, ul#css3menu1 ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  background-color: ;
+  border-width: 0;
+  border-style: solid;
+  border-color: ;
+}
+
+ul#css3menu1 ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1;
+  background-color: #00E9FE;
+  border-radius: 0 0 0px 0px;
+  -moz-border-radius: 0 0 0px 0px;
+  -webkit-border-radius: 0;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  padding: 0 0 0px 0;
+  filter: alpha(opacity=100);
+}
+
+ul#css3menu1 li:hover > * {
+  display: block;
+}
+
+ul#css3menu1 li {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  font-size: 0;
+  float: left;
+}
+
+ul#css3menu1 li:hover {
+  z-index: 1;
+}
+
+ul#css3menu1 ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  opacity: 1;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  padding: 0px;
+}
+
+ul#css3menu1 {
+  font-size: 0;
+  z-index: 999;
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  padding: 0px 0px 0px 0;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  *display: inline;
+}
+
+* html ul#css3menu1 li button {
+  display: inline-block;
+}
+
+ul#css3menu1 > li {
+  margin: 0 0 0 1px;
+}
+
+ul#css3menu1 ul > li {
+  margin: 0px 0 0;
+}
+
+ul#css3menu1 button:active, ul#css3menu1 button:focus {
+  outline-style: none;
+}
+
+ul#css3menu1 button {
+  display: block;
+  vertical-align: middle;
+  text-align: left;
+  text-decoration: none;
+  font: 13px Arial, sans-serif;
+  color: #00575F;
+  cursor: pointer;
+  padding: 0px;
+  background-color: #00E9FE;
+  background-repeat: repeat;
+  border-width: 0px;
+  border-style: none;
+  border-color: ;
+  width: 12em;
+  height:30px;
+}
+
+ul#css3menu1 ul li {
+  float: none;
+  margin: 0;
+}
+
+ul#css3menu1 ul button {
+  text-align: left;
+  padding: 4px;
+  background-color: #00E9FE;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #424D3C;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  color: #00575F;
+  text-decoration: none;
+}
+
+ul#css3menu1 li:hover > button, ul#css3menu1 li button.pressed {
+  background-color: #00575F;
+  border-style: none;
+  color: #00E8FE;
+}
+
+ul#css3menu1 span {
+  display: block;
+  overflow: visible;
+  background-image: url("../icons/css/biblio2/visual/arrowmain0.gif");
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 17px;
+}
+
+ul#css3menu1 li:hover > button > span {
+  background-image: url("../icons/css/biblio2/visual/arrowmain1.gif");
+}
+
+ul#css3menu1 ul span {
+  background-image: url("../icons/css/biblio2/visual/arrowsub.png");
+  padding-right: 12px;
+}
+
+ul#css3menu1 ul li:hover > button span {
+  background-image: url("../icons/css/biblio2/visual/arrowsub.png");
+}
+
+ul#css3menu1 li:hover > button, ul#css3menu1 li > button.pressed {
+  background-color: #00575F;
+  border-style: none;
+  color: #00E8FE;
+  text-decoration: none;
+}
+
+ul#css3menu1 ul li:hover > button, ul#css3menu1 ul li > button.pressed {
+  background-color: #00575F;
+  border-style: solid;
+  border-color: #009CA9;
+  color: #00E8FE;
+  text-decoration: none;
+}
+
+ul#css3menu1 ul ul li {
+  margin: 2px 0 0;
+}
+
+ul#css3menu1 > li > button {
+  padding: 3px 10px;
+}
+
+ul#css3menu1 li.topmenu > button {
+  border-width: 0 0 3px 0;
+  border-style: none;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  padding: 3px 10px;
+  width: 12em;
+  height:30px;  
+}
+
+ul#css3menu1 li.topmenu:hover > button, ul#css3menu1 li.topmenu > button.pressed {
+  border-style: none;
+}
+
+ul#css3menu1 li.toproot > button {
+  border-width: 0 0 3px 0;
+  border-style: none;
+  border-color: #00E9FE;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  padding: 3px 10px;
+  width: 12em;
+  height:30px;
+}
+
+ul#css3menu1 li.toproot:hover > button, ul#css3menu1 li.toproot > button.pressed {
+  border-style: solid;
+  border-color: #00575F;
+  border-radius: 0px 0px 0 0;
+  -moz-border-radius: 0px 0px 0 0;
+  -webkit-border-radius: 0px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+}
+
+
+
+
+html /deep/ paper-dialog {
+    color: green;
+}
+html /deep/ paper-dialog::shadow #scroller {
+    height: 300px;
+    width: 300px;
+}

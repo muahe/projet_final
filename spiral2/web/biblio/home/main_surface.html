@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="../biblio_app.html">
+<link rel="import" href="main_content.html">
+<link rel='import' href='packages/paper_elements/paper_dialog.html'>
+<link rel='import' href='packages/paper_elements/paper_button.html'>
+
+<link rel="import" href="packages/core_elements/core_icons.html">
+<link rel="import" href="packages/paper_elements/paper_icon_button.html">
+<link rel="import" href="packages/paper_elements/paper_fab.html">
+
+
+<polymer-element name="main-surface">
+  <template>
+
+  <link rel="stylesheet" href="../css/style.css"  />
+  <link rel="stylesheet" href="../css/style_menu.css"  />
+  
+  
+
+  
+    <paper-dialog id="autom_desc_dialog" heading="A propos de .." transition="core-transition-top" 
+         style="width:450px;height:300px;">
+      <img src="../icons/css/biblio2/visual/logo_bibliotheque.gif" alt="DZone" class="floatleft" />  
+      <h3>Système integré de gestion des bibliothèques - SIGB</h3>
+      <br> Version :  0.9.0
+      <h4>
+      Application créée dans le cadre du projet final du cours SIO-6014
+      </h4>
+      <p align="justify">
+      Le sujet du projet est de créer une application professionnelle dont le le model est constitué d'au moins 3 concepts avec 2 relations.
+      les données doivent être persistantes.
+      Voir l'énoncé sur <a href="https://docs.google.com/document/d/1bVOCmaoe3kmCzS5B3uJYnz4BnZ6UMEaLDqE6bwN_dQI/edit" target="_blank">On Dart Web Projects - Team Project</a>
+      </p>     
+    </paper-dialog>
+  
+  
+  <div id="page-wrap">
+
+    <div id="top-bar">
+      <img src="../icons/css/biblio2/visual/logo_bibliotheque.gif" alt="DZone" class="floatleft" />
+      <div id="right-side">
+        <!--a href="#" class="first">courriel usager</a-->
+        <div>{{usager.nom}} - ({{usager.courriel}})</div> &ensp;
+        <a href="#"></a>
+        <paper-button  tabindex="0" on-click="{{quitter}}">Deconnexion</paper-button> &emsp;
+      </div>
+    </div>
+    
+      <div id="zone-menu">
+ 
+        <ul id="css3menu1" class="topmenu">
+          <li class="topmenu">
+            <button class="pressed" style="width:74px;height:29px;line-height:29px;">Accueil</button>
+            <!--a class="pressed" href="#" style="width:74px;height:29px;line-height:29px;">Accueil</a-->
+          </li>
+          <li class="toproot">
+            <button style="width:107px;height:29px;line-height:29px;"><span>Menu usager</span></button>
+            <!--a href="#" style="width:107px;height:29px;line-height:29px;"><span>Menu usager</span></a-->
+          <ul>
+            <li>
+              <button><span>Recherche</span></button>
+              <!--a href="#"><span>Recherche</span></a-->
+            <ul>
+              <li><button>Bibliotheques</button></li>
+              <li><button>Ouvrages</button></li>
+              <li><button>Usagers</button></li>
+            </ul></li>
+            <li><button>Profil usager</button></li>
+            <li><button><span>Reservation</span></button>
+            <ul>
+              <li><button>Mes reservations</button></li>
+              <li><button>Nouvelle reservation</button></li>
+            </ul></li>
+          </ul></li>
+          <li class="toproot"><button style="height:29px;line-height:29px;"><span>Menu Administrateur</span></button>
+          <ul>
+            <li><button><span>Mise à jour</span></button>
+            <ul>
+              <li><button>Bibliotheque</button></li>
+              <li><button>Usager</button></li>
+              <li><button>Ouvrage</button></li>
+              <li><button>Type ouvrage</button></li>
+            </ul></li>
+            <li><button><span>Ajout</span></button>
+            <ul>
+              <li><button>Bibliotheque</button></li>
+              <li><button>Ouvrage</button></li>
+              <li><button>Type ouvrage</button></li>
+              <li><button>Usager</button></li>
+            </ul></li>
+            <li><button><span>Importation</span></button>
+            <ul>
+              <li><button on-click="{{importBiblio}}">Bibliotheques</button></li>
+              <li><button on-click="{{importOuvrage}}">Ouvrages</button></li>
+              <li><button on-click="{{importTypeOuvrage}}">Types ouvrage</button></li>
+              <li><button on-click="{{importUsager}}">Usagers</button></li>
+            </ul></li>
+          </ul></li>
+          <li class="toproot"><button style="width:74px;height:29px;line-height:29px;"><span>Aide</span></button>
+          <ul>
+            <li><button on-click="{{openHelp}}">Aide en ligne</button></li>
+            <li>
+              <button on-click="{{openClickHandler}}"> À propos</button>
+            </li>
+          </ul></li>
+        </ul>
+
+
+
+
+
+    </div>
+    
+    <div id="main-content">
+      <main-content importBiblioClicked="{{importBiblioClicked}}"
+      importOuvrageClicked="{{importOuvrageClicked}}"
+      importtypOuvrClicked="{{importtypOuvrClicked}}"
+      importUsagerClicked="{{importUsagerClicked}}"></main-content>
+      <!--paper-button id="open" autofocus label="open" on-click="{{openClickHandler}}">je suis la</paper-button-->
+    </div>
+    
+    <div id="footer" align="center">
+      &copy; 2014   <a href="#">Mustapha & Hassane</a>
+    </div>
+    
+  </div>    
+    
+  </template>
+  <script type="application/dart" src="main_surface.dart"></script>
+</polymer-element>   

@@ -1,0 +1,204 @@
+{
+		"OUVRAGES": [ 		{
+			"Auteur": "About Edmond 1828-1885",
+			"Titre": "L'homme à l'oreille cassée",
+			"Isbn": "2-89240-051-1",
+			"Editeur": "Hull : E.L.V.O 1986.",
+			"Description": "Large vision (Large vision de l'Outaouais)",
+			"Sujet": "Science-fiction.",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Lalonde Robert 1947-",
+			"Titre": "L'ogre de grand remous : roman / Robert Lalonde",
+			"Isbn": "2-02-013709-7",
+			"Editeur": "Paris : Éditions du Seuil c1992.",
+			"Description": "-",
+			"Sujet": "-",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Stine R. L. (Robert Lawrence) 1943-",
+			"Titre": "Sous-sol interdit! / R. L. Stine ; traduit de l'anglais par Louise Binette",
+			"Isbn": "2-7625-7439-0",
+			"Editeur": "Saint-Lambert : Héritage 1993.",
+			"Description": "Chair de poule (Héritage (Firme)) 2",
+			"Sujet": "Peur Romans.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Stine R. L. (Robert Lawrence) 1943-",
+			"Titre": "D'étranges photos! / R. L. Stine ; traduit de l'anglais par Nicole Ferron",
+			"Isbn": "2-7625-7438-2",
+			"Editeur": "Saint-Lambert : Héritage 1993.",
+			"Description": "Chair de poule (Héritage (Firme)) 3",
+			"Sujet": "Peur Romans.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Ivy Bill 1953-",
+			"Titre": "Les papillons nocturnes / Bill Ivy",
+			"Isbn": "0-7172-2363-9 (cart.)",
+			"Editeur": "Montréal : Grolier c1987.",
+			"Description": "Le monde merveilleux des animaux.",
+			"Sujet": "Papillons",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Béguin Gilles 1946-",
+			"Titre": "La Cité interdite des fils du ciel / Gilles Béguin et Dominique Morel",
+			"Isbn": "2-07-053395-6 (déduit du code-barres) (Gallimard)",
+			"Editeur": "Paris : Gallimard : Paris-Musées c1996.",
+			"Description": "Découvertes ; 303",
+			"Sujet": "-",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Ajar Emile 1914-1980",
+			"Titre": "La vie devant soi : roman",
+			"Isbn": "-",
+			"Editeur": "Paris : Mercure de France 1975.",
+			"Description": "-",
+			"Sujet": "-",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Gaudreault-Labrecque Madeleine",
+			"Titre": "Flocons de rêve / texte Madeleine Gaudreault Labrecque ; ill. Joanne Ouellet",
+			"Isbn": "2-920660-17-9",
+			"Editeur": "Saint-Hubert : Editions du Raton laveur c1990.",
+			"Description": "-",
+			"Sujet": "Neige Fiction.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Hitchcock Alfred 1899-1980",
+			"Titre": "Histoires à faire peur / [présentées par] Alfred Hitchcock",
+			"Isbn": "2-921458-03-9 (br.)",
+			"Editeur": "Aylmer Québec : Jouvence 1992.",
+			"Description": "-",
+			"Sujet": "Livres en gros caractères",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Konsalik Heinz G. (Heinz Gûnther) 1921-1999",
+			"Titre": "Le trésor des tsars / Heinz G. Konsalik",
+			"Isbn": "2-258-03198-2",
+			"Editeur": "Paris : Presses de la Cité 1990.",
+			"Description": "Roman (Presses de la Cité)",
+			"Sujet": "-",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Charteris Leslie 1907-",
+			"Titre": "Le Saint et le collier des Habsbourg : [roman] / L. Charteris",
+			"Isbn": "2-921458-04-7 (br.)",
+			"Editeur": "Aylmer Québec : Jouvence 1992.",
+			"Description": "Roman policier (Québec Amérique)",
+			"Sujet": "Livres en gros caractères",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "",
+			"Titre": "Almanach du peuple",
+			"Isbn": "-",
+			"Editeur": "Montréal : Beauchemin 1855-2008.",
+			"Description": "-",
+			"Sujet": "Almanachs québécois",
+			"Type": "CONSUL"
+		}, 		{
+			"Auteur": "",
+			"Titre": "Almanach populaire catholique",
+			"Isbn": "-",
+			"Editeur": "Sainte-Anne-de-Beaupré : Revue Sainte Anne de Beaupré 1981-2006",
+			"Description": "-",
+			"Sujet": "-",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Pini Wendy",
+			"Titre": "Les larmes de la montagnes [i.e. montagne] bleue / Wendy & Richard Pini ; traduction Billy",
+			"Isbn": "2-86967-470-1",
+			"Editeur": "Issy-les-Moulineaux : Sédli : Vents d'Ouest c1996.",
+			"Description": "Elfquest : la fantastique quête des elfes ; 23.",
+			"Sujet": "Lutins Bandes dessinées.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Ridpath Ian 1947-",
+			"Titre": "L'espace / textes de Ian Ridpath et James Muirden ; adaptation française de Marc Viroux ; illustrations de Ron Jobson",
+			"Isbn": "2-8006-1556-7 (cart.) : 1695",
+			"Editeur": "[Chevron Belgique] : Hemma c1991.",
+			"Description": "Le Monde autour de nous.",
+			"Sujet": "Astronomie",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Huot Réjean 1950-",
+			"Titre": "Introduction à la psychologie / Réjean Huot",
+			"Isbn": "2-89105-531-4 (br.) (v.)",
+			"Editeur": "Boucherville : G. Morin c1994.",
+			"Description": "-",
+			"Sujet": "Psychologie",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Bichonnier Henriette 1943-",
+			"Titre": "L'insupportable Mimi souris / Henriette Bichonnier ; dessiné par Françoise Rousset",
+			"Isbn": "2-09-274214-0 (br.) : 695",
+			"Editeur": "Paris : Nathan c1991.",
+			"Description": "Tourne page",
+			"Sujet": "Animaux Fiction.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Cauvin Raoul 1938-",
+			"Titre": "Souffle au coeur / [illustrations de] Malik ; [texte de] Cauvin",
+			"Isbn": "2-8001-1897-0 (cart.)",
+			"Editeur": "[Paris] : Dupuis 1992.",
+			"Description": "-",
+			"Sujet": "Cupidon (Divinité romaine) Bandes dessinées.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Theroux Paul 1941-",
+			"Titre": "La Chine à petite vapeur / Paul Theroux ; trad. de l'anglais par Anne Damour",
+			"Isbn": "2-246-41441-5 (br.) : 3800",
+			"Editeur": "Paris : Grasset 1989.",
+			"Description": "-",
+			"Sujet": "Voyages en train Chine.",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Ankeny Nesmith C",
+			"Titre": "Le poker : règles stratégie et exercices / trad. de l'anglais par Corine Derblum",
+			"Isbn": "2-268-00407-4",
+			"Editeur": "Monaco : Éditions du Rocher 1985.",
+			"Description": "-",
+			"Sujet": "Théorie des jeux",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Clark Mary Higgins 1931-",
+			"Titre": "La maison du guet : roman / Mary Higgins Clark ; trad. de l'américain par Anne Damour",
+			"Isbn": "2-253-04144-0 (br.) : 650",
+			"Editeur": "Paris : Le Livre de poche [1987] c1984.",
+			"Description": "Le livre de poche ; 7516.",
+			"Sujet": "Roman policier.",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Docteur Soleil",
+			"Titre": "Apprendre à faire germer des graines et à cultiver de jeunes pousses / Docteur Soleil ; ill. Anja Bell Alain Mermoud ; préf. de Sadruddin Aga Khan",
+			"Isbn": "2-88058-015-8",
+			"Editeur": "Chêne-Bourg Suisse : Soleil 1984.",
+			"Description": "-",
+			"Sujet": "Germination.",
+			"Type": "LIVRE-ADU"
+		}, 		{
+			"Auteur": "Gantschev Ivan 1925-",
+			"Titre": "Drôle de zèbre : une histoire / écrite et illustrée par Ivan Gantschev ; racontée en français par Laurence Pastiaux",
+			"Isbn": "2-7366-4508-1 (cart.)",
+			"Editeur": "Paris : Épigones c1991.",
+			"Description": "Histoires pour toi",
+			"Sujet": "Meuniers Fiction.",
+			"Type": "LIVRE-J"
+		}, 		{
+			"Auteur": "Caratini Roger 1924-2009",
+			"Titre": "Dictionnaire des découvertes / Roger Caratini",
+			"Isbn": "2-86391-352-2",
+			"Editeur": "Paris : Édition no 1 c1990.",
+			"Description": "-",
+			"Sujet": "Découvertes scientifiques",
+			"Type": "CONSUL"
+		}, 		{
+			"Auteur": "Burkholz Herbert",
+			"Titre": "Les sensitifs : roman / Herbert Burkholz ; traduit de l'anglais par Frank Straschitz",
+			"Isbn": "2-226-04821-9",
+			"Editeur": "Paris : Albin Michel 1991 c1992.",
+			"Description": "-",
+			"Sujet": "Espionnage Romans nouvelles etc.",
+			"Type": "LIVRE-ADU"
+		}
+	]
+}

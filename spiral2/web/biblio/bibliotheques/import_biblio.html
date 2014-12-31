@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+<link rel='import' href='packages/paper_elements/paper_button.html'>
+<link rel='import' href='packages/paper_elements/paper_spinner.html'>
+<link rel='import' href='packages/paper_elements/paper_progress.html'>
+
+<polymer-element name="import-biblio">
+  <template>
+    <!--link rel="stylesheet" href="../css/importation.css"  /-->
+
+  <style>
+.upload_form_cont {
+    background: -moz-linear-gradient(#ffffff, #f2f2f2);
+    background: -ms-linear-gradient(#ffffff, #f2f2f2);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background: -webkit-linear-gradient(#ffffff, #f2f2f2);
+    background: -o-linear-gradient(#ffffff, #f2f2f2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2')";
+    background: linear-gradient(#ffffff, #f2f2f2);
+ 
+    color:#000;
+    overflow:hidden;
+}
+#upload_form {
+    float:left;
+    padding:20px;
+    width:100%;
+}
+#preview {
+    background-color:#fff;
+    display:block;
+    float:right;
+    width:200px;
+}
+#upload_form > div {
+    margin-bottom:10px;
+}
+#speed,#remaining {
+    float:left;
+    width:100px;
+}
+#b_transfered {
+    float:right;
+    text-align:right;
+}
+.clear_both {
+    clear:both;
+}
+input {
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-border-radius:10px;
+ 
+    border:1px solid #ccc;
+    font-size:14pt;
+    padding:5px 10px;
+}
+input[type=button] {
+    background: -moz-linear-gradient(#ffffff, #dfdfdf);
+    background: -ms-linear-gradient(#ffffff, #dfdfdf);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dfdfdf));
+    background: -webkit-linear-gradient(#ffffff, #dfdfdf);
+    background: -o-linear-gradient(#ffffff, #dfdfdf);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dfdfdf');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dfdfdf')";
+    background: linear-gradient(#ffffff, #dfdfdf);
+}
+#image_file {
+    width:400px;
+}
+#progress_info {
+    font-size:10pt;
+}
+#fileinfo,#error,#error2,#abort,#warnsize {
+    color:#aaa;
+    display:none;
+    font-size:10pt;
+    font-style:italic;
+    margin-top:10px;
+}
+#progress {
+    border:1px solid #ccc;
+    display:none;
+    float:left;
+    height:14px;
+ 
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-border-radius:10px;
+ 
+    background: -moz-linear-gradient(#66cc00, #4b9500);
+    background: -ms-linear-gradient(#66cc00, #4b9500);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #66cc00), color-stop(100%, #4b9500));
+    background: -webkit-linear-gradient(#66cc00, #4b9500);
+    background: -o-linear-gradient(#66cc00, #4b9500);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc00', endColorstr='#4b9500');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc00', endColorstr='#4b9500')";
+    background: linear-gradient(#66cc00, #4b9500);
+}
+#progress_percent {
+    float:right;
+}
+#upload_response {
+    margin-top: 10px;
+    padding: 20px;
+    overflow: hidden;
+    display: none;
+    border: 1px solid #ccc;
+ 
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-border-radius:10px;
+ 
+    box-shadow: 0 0 5px #ccc;
+    background: -moz-linear-gradient(#bbb, #eee);
+    background: -ms-linear-gradient(#bbb, #eee);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbb), color-stop(100%, #eee));
+    background: -webkit-linear-gradient(#bbb, #eee);
+    background: -o-linear-gradient(#bbb, #eee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
+    background: linear-gradient(#bbb, #eee);
+}
+
+
+paper-progress {
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+}
+
+paper-progress.pink::shadow #activeProgress {
+  background-color: #e91e63;
+}
+
+paper-progress.pink::shadow #secondaryProgress {
+  background-color: #f8bbd0;
+}
+
+/*
+.grid-container{
+    width: 100%; 
+    /*max-width: 1200px;*/      
+}*/
+
+/*-- our cleafix hack -- */ 
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+}
+
+[class*='col-1'] {
+    float: left; 
+    min-height: 1px; 
+    width: 20%; 
+    /*-- our gutter -- */
+    padding: 12px; 
+    background-color: #009CA9;
+}
+
+
+[class*='col-2'] {
+    float: left; 
+    min-height: 1px; 
+    width: 20%; 
+    /*-- our gutter -- */
+    padding: 12px; 
+    background-color: #ffffff;
+}
+
+.col-1{ width: 20%; }
+.col-2{ width: 20%; height:70px;}
+
+
+.outline, .outline *{
+    outline: 1px solid #00E8FE; 
+}
+
+
+/*-- some extra column content styling --*/
+[class*='col-'] > p {
+ background-color: #FFC2C2; 
+ padding: 0;
+ margin: 0;
+ text-align: center; 
+ color: white; 
+}
+
+
+  </style>
+
+
+  <div class="container">
+    <div class="contr"><h2>Importation des données des Bibliothèques de Québec</h2></div>
+      <div class="upload_form_cont">
+        <form id="upload_form">
+          <div>
+            <div><label for="image_file">Prière de choisir le fichier <span style="color:red"> "Bibliotheques.json" </span> dans le dossier<span style="color:red"> Web/import</span></label></div>
+            <br><br><div><input type="file" id="image_file" on-change="{{updatefileToPlay}}"/></div>
+          </div>
+          <div>
+            <paper-spinner alt="Chargement des enregistrements Bibliothèques" active={{spinActiv}}></paper-spinner>
+            <paper-progress value="{{progressValue}}" max="100"></paper-progress><br>
+            <!--paper-button autofocus on-click="{{startUploading}}" raised>Importer les données</paper-button-->
+              <!--template if={{printGrid}}-->
+              <div class="grid-container outline">
+                <div class="row">
+                  <div class="col-1">Nom Bibliothèque</div>   
+                  <div class="col-1">Adresse</div>
+                  <div class="col-1">Informations utiles</div>
+                  <div class="col-1">Horaires d'ouverture</div>
+                </div>              
+              <template repeat="{{biblio in listBiblios}}">
+                <div class="row">
+                  <div class="col-2">{{biblio.nom}}</div>   
+                  <div class="col-2">{{biblio.adresse}}</div>
+                  <div class="col-2">{{biblio.informations}}</div>
+                  <div class="col-2">{{biblio.horaires}}</div>
+                </div>
+              </template>
+              </div>
+              <!--/template-->
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </template>
+  <script type="application/dart" src="import_biblio.dart"></script>
+</polymer-element>   

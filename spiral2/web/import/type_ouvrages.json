@@ -1,0 +1,16 @@
+{
+    "T_OUVRAGES": [
+      {
+        "idType": "1",
+        "type": "LIVRE-ADU"
+      },
+      {
+        "idType": "2",
+        "type": "LIVRE-J"
+      },
+      {
+        "idType": "3",
+        "type": "CONSUL"
+      }
+    ]
+}

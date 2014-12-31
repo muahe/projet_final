@@ -1,0 +1,13 @@
+name: biblio_reservation
+version: 0.0.1
+description: biblio_reservation application that uses dartling for its model.
+author: Your Name
+homepage: http://ondart.me/
+documentation:
+dependencies:
+  browser: any
+  dartling:
+    git: https://github.com/dzenanr/dartling.git
+  dartling_default_app:
+    git: https://github.com/dzenanr/dartling_default_app.git
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="../biblio_app.html">
+
+<polymer-element name="nouveau-usager">
+  <template>
+      <div>Créer votre compte usager :</div>  
+      <form on-submit="{{validerUsager}}">      
+      <p>
+          <label for="nom">Nom <span class="required">*</span></label> :<!--on-keyup="{{validerNom}}-->
+          <input id="nom" placeholder="Votre nom"  
+          class="textbox" border="0" type="text" size="20" value="{{usager.nom}}" required/>
+      </p>
+      <p>
+          <label for="adresse">Adresse <span class="required">*</span></label>:  <!--on-keyup="{{validerAdresse}}"-->
+          <input id="adresse" placeholder="Votre adresse" 
+          class="textbox" border="0" type="text" size="20" value="{{usager.adresse}}" required/>
+      </p>
+      <p>
+          <label for="tel">Téléphone <span class="required">*</span></label>: <!--on-keyup="{{validerTel}}"-->
+          <input id="tel" placeholder="(000)000-0000" pattern="\([0-9]{3}\)[0-9]{3}-[0-9]{4}"
+          class="textbox" border="0" type="tel" size="20" value="{{usager.tel}}" required/>
+      </p>
+      <p>
+          <label for="courriel">Courriel <span class="required">*</span></label> : <!--on-keyup="{{validerCourriel}}"-->
+          <input id="courriel" placeholder="Votre courriel" 
+          class="textbox" border="0" type="email" size="20" value="{{usager.courriel}}" required/>
+      </p>
+      <p>
+          <label for="password">Mot de passe <span class="required">*</span></label>: <!--on-keyup="{{validerPassword}}"-->
+          <input id="password" placeholder="Votre mot de passe" 
+          class="textbox" border="0" type="password" size="20" value="{{usager.motPasse}}" required/>
+      </p>            
+      <button class="CommandButton" type="submit">Ajouter</button>
+      <button class="CommandButton" type="button" on-click="{{cancelForm}}">Annuler</button>      
+    <div>
+      <span class="error" hidden?="{{myErrorMessage.isEmpty}}">
+        {{myErrorMessage}}
+      </span>
+    </div>
+    </form>    
+  </template>
+  <script type="application/dart" src="nouveau_usager.dart"></script>
+</polymer-element>    
+
+
+

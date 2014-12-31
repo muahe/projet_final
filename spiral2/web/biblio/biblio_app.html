@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="usagers/login_form.html">
+<link rel="import" href="usagers/nouveau_usager.html">
+<link rel="import" href="home/main_content.html"/>
+<link rel="import" href="home/main_surface.html"/>
+
+
+
+
+<polymer-element name="biblio-app">
+<script type="application/dart" src="biblio_app.dart"></script>
+  <template>
+  
+    <link rel="stylesheet" type="text/css" href="css/biblio.css" />
+  
+    <div id="main">
+      <template id="loginTemplate" if="{{!isLoggedIn}}">
+        <div id="IndexContainer"  >
+          <div class="LogoAccueil" style="left:450px;top:50px;"><img src="icons/css/biblio2/visual/logo_accueil.gif" border="0" /></div>
+          <div id="IndexAuthentification">
+            <div on-load="{{usagers.open}}" on-newusageratoadd="{{newUsagerAdded}}">
+              <template if="{{!emptyList}}">
+                <div on-usagerauthentified="{{authentifierUsager}}"
+                       on-formnotneeded="{{resetForm}}">
+                  <login-form usager="{{newUsager}}"></login-form>
+                </div>
+              </template>
+              <template if="{{emptyList}}">
+                <div on-usagervalidated="{{addUsager}}"
+                     on-formnotneeded="{{resetForm}}">            
+                  <nouveau-usager usager="{{newUsager}}"></nouveau-usager>
+                </div>
+              </template>
+            </div>
+          </div>  
+        </div>   
+      </template>
+      <template id="mainTemplate"  if="{{isLoggedIn}}">
+      <main-surface isLoggedIn={{isLoggedIn}} usager={{userConnected}}></main-surface>
+      </template>
+    </div>
+
+
+  </template>
+  <!--script type="application/dart" src="biblio_app.dart"></script-->
+</polymer-element>    
