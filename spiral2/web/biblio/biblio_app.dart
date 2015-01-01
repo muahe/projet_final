@@ -19,7 +19,7 @@ class BiblioApp extends PolymerElement {
   @observable Usagers usagers;
   @observable Usager newUsager, userConnected;
   @observable bool emptyList = true;
-  @observable bool isLoggedIn = true;
+  @observable bool isLoggedIn = false;
   String tempSTR="";
 
   BiblioModels domain;
@@ -74,7 +74,7 @@ class BiblioApp extends PolymerElement {
     usagers.addUsager(ct).then((_) {
       emptyList = false;
       newUsager = new Usager(usagers.concept);
-      //dispatchEvent(new CustomEvent('formnotneeded'));
+
     },
     onError: (e) { print('duplicate key'); } );    
     
@@ -95,14 +95,12 @@ class BiblioApp extends PolymerElement {
                                     &&(e.motPasse==ct.motPasse)));
         if (userConnected != null ){
           
-          //var request = new HttpRequest();
-//          var url = "biblio/home/accueil.html?auth=true";
-//          window.open(url, '_self');
+
           isLoggedIn = true;
           
   
           
-  //        href = "home/accueil.html";
+
         }
       } catch(exception){
         window.alert("Le courriel ou le mot de passe saisi est incorrect !! ");  

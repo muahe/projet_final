@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="../biblio_app.html">
+<link rel="import" href="../bibliotheques/import_biblio.html">
+
+<link rel="import" href="packages/paper_elements/paper_input_decorator.html">
+<link rel="import" href="packages/paper_elements/paper_input.html">
+<link rel="import" href="packages/paper_elements/paper_button.html">
+
+
+<polymer-element name="ajout-usager">
+  <template>
+
+  <style>
+  #formDiv {
+    width: 50%;
+    margin: 0 auto
+    
+  }
+
+  </style>
+
+      <h3>Ajout de nouveau usager</h3>  
+      <br>
+
+    <div id="formDiv">
+        <paper-input-decorator floatingLabel label="Nom :" error="is not a number">
+            <input id="nom" is="core-input" value="{{usager.nom}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Adresse :">
+            <input id="adresse" is="core-input" value="{{usager.adresse}}" on-input="{{validerAdresse}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Téléphone :">
+            <input id="tel" is="core-input" value="{{usager.tel}}" on-input="{{validerTel}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Courriel :">
+            <input id="courriel" is="core-input" value="{{usager.courriel}}" on-input="{{validerCourriel}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Date d'inscription :">
+            <input id="dateInscription" is="core-input" value="{{usager.dateInscription}}" on-input="{{validerDInscription}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Mot de passe :">
+            <input id="password" is="core-input" value="{{usager.motPasse}}" on-input="{{validerPassword}}">
+        </paper-input-decorator>        
+        
+                
+        <br><br>
+        <paper-button id="ajouter" tabindex="0" on-click="{{validerUsager}}">Ajouter</paper-button>
+        <paper-button id="annuler" tabindex="0" on-click="{{annuler}}">Annuler</paper-button>
+
+    </div>
+
+
+
+
+  </template>
+  <script type="application/dart" src="ajout_usager.dart"></script>
+</polymer-element>   

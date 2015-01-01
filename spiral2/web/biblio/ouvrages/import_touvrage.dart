@@ -35,7 +35,6 @@ class ImportTouvrageElement extends PolymerElement {
 
     touvrages = entries.typeOuvrages;
     initObservableLists();
-    //start();
   }
   
   
@@ -70,7 +69,6 @@ class ImportTouvrageElement extends PolymerElement {
             }
             
           }
-    //  spinActiv = false;
     }  
   
   storeData(Object result){

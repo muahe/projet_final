@@ -24,7 +24,7 @@
          style="width:450px;height:300px;">
       <img src="../icons/css/biblio2/visual/logo_bibliotheque.gif" alt="DZone" class="floatleft" />  
       <h3>Système integré de gestion des bibliothèques - SIGB</h3>
-      <br> Version :  0.9.0
+      Version :  0.9.0
       <h4>
       Application créée dans le cadre du projet final du cours SIO-6014
       </h4>
@@ -41,10 +41,8 @@
     <div id="top-bar">
       <img src="../icons/css/biblio2/visual/logo_bibliotheque.gif" alt="DZone" class="floatleft" />
       <div id="right-side">
-        <!--a href="#" class="first">courriel usager</a-->
-        <div>{{usager.nom}} - ({{usager.courriel}})</div> &ensp;
-        <a href="#"></a>
-        <paper-button  tabindex="0" on-click="{{quitter}}">Deconnexion</paper-button> &emsp;
+        <div>{{usager.nom}}({{usager.courriel}})</div>
+        <paper-button id="papButton" tabindex="0" on-click="{{quitter}}">Deconnexion</paper-button>
       </div>
     </div>
     
@@ -53,15 +51,12 @@
         <ul id="css3menu1" class="topmenu">
           <li class="topmenu">
             <button class="pressed" style="width:74px;height:29px;line-height:29px;">Accueil</button>
-            <!--a class="pressed" href="#" style="width:74px;height:29px;line-height:29px;">Accueil</a-->
           </li>
           <li class="toproot">
             <button style="width:107px;height:29px;line-height:29px;"><span>Menu usager</span></button>
-            <!--a href="#" style="width:107px;height:29px;line-height:29px;"><span>Menu usager</span></a-->
           <ul>
             <li>
               <button><span>Recherche</span></button>
-              <!--a href="#"><span>Recherche</span></a-->
             <ul>
               <li><button>Bibliotheques</button></li>
               <li><button>Ouvrages</button></li>
@@ -85,10 +80,10 @@
             </ul></li>
             <li><button><span>Ajout</span></button>
             <ul>
-              <li><button>Bibliotheque</button></li>
-              <li><button>Ouvrage</button></li>
-              <li><button>Type ouvrage</button></li>
-              <li><button>Usager</button></li>
+              <li><button on-click="{{ajoutBiblio}}">Bibliotheque</button></li>
+              <li><button on-click="{{ajoutOuvrage}}">Ouvrage</button></li>
+              <li><button on-click="{{ajoutTouvrage}}">Type ouvrage</button></li>
+              <li><button on-click="{{ajoutUsager}}">Usager</button></li>
             </ul></li>
             <li><button><span>Importation</span></button>
             <ul>
@@ -113,12 +108,15 @@
 
     </div>
     
-    <div id="main-content">
+    <div id="main-content"> 
       <main-content importBiblioClicked="{{importBiblioClicked}}"
       importOuvrageClicked="{{importOuvrageClicked}}"
       importtypOuvrClicked="{{importtypOuvrClicked}}"
-      importUsagerClicked="{{importUsagerClicked}}"></main-content>
-      <!--paper-button id="open" autofocus label="open" on-click="{{openClickHandler}}">je suis la</paper-button-->
+      importUsagerClicked="{{importUsagerClicked}}"
+      ajoutBiblioClicked="{{ajoutBiblioClicked}}"
+      ajoutUsagerClicked="{{ajoutUsagerClicked}}"
+      ajoutOuvrageClicked="{{ajoutOuvrageClicked}}"
+      ajoutTouvrageClicked="{{ajoutTouvrageClicked}}"></main-content>
     </div>
     
     <div id="footer" align="center">

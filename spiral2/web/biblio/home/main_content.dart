@@ -1,6 +1,5 @@
-import 'dart:html';
 import 'package:polymer/polymer.dart';
-import "package:biblio_reservation/biblio_reservation.dart"; 
+ 
 
 
 
@@ -12,9 +11,15 @@ class MainContentElement extends PolymerElement {
   @published bool importOuvrageClicked;
   @published bool importtypOuvrClicked;
   @published bool importUsagerClicked;
+  @published bool ajoutBiblioClicked;
+  @published bool ajoutUsagerClicked;
+  @published bool ajoutOuvrageClicked;
+  @published bool ajoutTouvrageClicked;
+
   
   
   MainContentElement.created() : super.created() {
+    print("je suis dans main content");
     
   }
   

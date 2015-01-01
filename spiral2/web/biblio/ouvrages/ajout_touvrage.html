@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="../biblio_app.html">
+<link rel="import" href="../bibliotheques/import_biblio.html">
+
+<link rel="import" href="packages/paper_elements/paper_input_decorator.html">
+<link rel="import" href="packages/paper_elements/paper_input.html">
+<link rel="import" href="packages/paper_elements/paper_button.html">
+
+
+<polymer-element name="ajout-touvrage">
+  <template>
+
+  <style>
+  #formDiv {
+    width: 50%;
+    margin: 0 auto
+    
+  }
+
+  </style>
+
+      <h3>Ajout de nouveau type d'ouvrage</h3>  
+      <br>
+
+    <div id="formDiv">
+        <paper-input-decorator floatingLabel label="Type d'ouvrage :">
+            <input id="touvrage" is="core-input" value="{{touvrage.type}}" on-input="{{validerType}}">
+        </paper-input-decorator>
+        
+        <br><br>
+        <paper-button id="ajouter" tabindex="0" on-click="{{validerTouvrage}}">Ajouter</paper-button>
+        <paper-button id="annuler" tabindex="0" on-click="{{annuler}}">Annuler</paper-button>
+
+    </div>
+
+
+
+
+  </template>
+  <script type="application/dart" src="ajout_touvrage.dart"></script>
+</polymer-element>   

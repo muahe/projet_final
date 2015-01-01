@@ -71,7 +71,7 @@ class ImportUsagerElement extends PolymerElement {
             }
             
           }
-    //  spinActiv = false;
+
     }  
   
   storeData(Object result){

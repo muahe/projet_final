@@ -1,8 +1,6 @@
 import 'dart:html';
 import 'package:polymer/polymer.dart';
 import "package:biblio_reservation/biblio_reservation.dart"; 
-import 'dart:indexed_db';
-import 'dart:async';
 import 'package:paper_elements/paper_dialog.dart';
 
 
@@ -11,17 +9,19 @@ class MainSurfaceElement extends PolymerElement {
   
   @published bool isLoggedIn;
   @published Usager usager;
+  
   @observable bool importBiblioClicked = false;
   @observable bool importOuvrageClicked = false;
   @observable bool importtypOuvrClicked = false;
   @observable bool importUsagerClicked = false;
-  
+  @observable bool ajoutBiblioClicked = false;
+  @observable bool ajoutUsagerClicked = false;
+  @observable bool ajoutOuvrageClicked = false;
+  @observable bool ajoutTouvrageClicked = false;
 
  AnchorElement aboutLink;
   
   MainSurfaceElement.created() : super.created() {
-    //aboutLink = shadowRoot.querySelector("#about");
-    //aboutLink.onClick.listen(openClickHandler);
   
   }
   
@@ -42,6 +42,10 @@ class MainSurfaceElement extends PolymerElement {
     importOuvrageClicked = false;
     importtypOuvrClicked = false;
     importUsagerClicked = false;
+    ajoutBiblioClicked = false;
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = false;
   }
   
   
@@ -50,6 +54,10 @@ class MainSurfaceElement extends PolymerElement {
     importOuvrageClicked = true;
     importtypOuvrClicked = false;
     importUsagerClicked = false;
+    ajoutBiblioClicked = false;
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = false;
   }
   
   
@@ -58,6 +66,10 @@ class MainSurfaceElement extends PolymerElement {
     importOuvrageClicked = false;
     importtypOuvrClicked = true;
     importUsagerClicked = false;
+    ajoutBiblioClicked = false;
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = false;
   }
   
   
@@ -66,8 +78,59 @@ class MainSurfaceElement extends PolymerElement {
     importOuvrageClicked = false;
     importtypOuvrClicked = false;
     importUsagerClicked = true;
+    ajoutBiblioClicked = false;   
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = false;
   }
  
+
+  void ajoutBiblio(Event e){
+    importBiblioClicked = false;
+    importOuvrageClicked = false;
+    importtypOuvrClicked = false;
+    importUsagerClicked = false;
+    ajoutBiblioClicked = true;
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = false;
+  }  
+  
+  
+  void ajoutUsager(Event e){
+    importBiblioClicked = false;
+    importOuvrageClicked = false;
+    importtypOuvrClicked = false;
+    importUsagerClicked = false;
+    ajoutBiblioClicked = false;
+    ajoutUsagerClicked = true;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = false;
+  }  
+  
+  
+  void ajoutOuvrage(Event e){
+    importBiblioClicked = false;
+    importOuvrageClicked = false;
+    importtypOuvrClicked = false;
+    importUsagerClicked = false;
+    ajoutBiblioClicked = false;
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = true;
+    ajoutTouvrageClicked = false;
+  }  
+  
+  
+  void ajoutTouvrage(Event e){
+    importBiblioClicked = false;
+    importOuvrageClicked = false;
+    importtypOuvrClicked = false;
+    importUsagerClicked = false;
+    ajoutBiblioClicked = false;
+    ajoutUsagerClicked = false;
+    ajoutOuvrageClicked = false;
+    ajoutTouvrageClicked = true;
+  }  
 
   quitter() {
 

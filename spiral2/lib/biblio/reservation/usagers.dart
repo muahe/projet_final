@@ -37,6 +37,39 @@ class Usager extends UsagerGen {
 
   // added after code gen - end 
  
+  
+
+    Future<Usager> addToDB(Usager usager){
+      
+      return BibliosDb.open().then((_){     
+        
+        var usagerAsMap = usager.toJsonMap();
+        
+        var transaction;
+        transaction = BibliosDb.db.transaction("usagers", 'readwrite');  
+
+      
+      var objectStore = transaction.objectStore("usagers");
+      
+      
+      objectStore.add(usagerAsMap).then((addedKey) {
+        usager.dbKey = addedKey;
+      });
+      
+      return transaction.completed.then((_) {
+        
+        return usager;
+
+      });
+      
+      });
+      
+      
+    }
+    
+
+  
+  
 } 
  
 class Usagers extends UsagersGen { 

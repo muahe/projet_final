@@ -36,7 +36,6 @@ class ImportBiblioElement extends PolymerElement {
 
     biblios = entries.bibliotheques;
     initObservableLists();
-    //start();
   }
   
   
@@ -71,7 +70,6 @@ class ImportBiblioElement extends PolymerElement {
             }
             
           }
-    //  spinActiv = false;
     }  
   
   storeData(Object result){

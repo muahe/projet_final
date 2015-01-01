@@ -51,7 +51,41 @@ class Ouvrage extends OuvrageGen {
       nbreExemplaire = entityMap['nbreExemplaire'];         
     }
   
-  
+
+
+
+    Future<Ouvrage> addToDB(Ouvrage ouvrage){
+      
+      return BibliosDb.open().then((_){     
+        
+        var ouvrageAsMap = ouvrage.toJsonMap();
+        
+        var transaction;
+        transaction = BibliosDb.db.transaction("ouvrageStore", 'readwrite');  
+
+      
+      var objectStore = transaction.objectStore("ouvrageStore");
+      
+      
+      objectStore.add(ouvrageAsMap).then((addedKey) {
+        ouvrage.dbKey = addedKey;
+      });
+      
+      return transaction.completed.then((_) {
+        
+        return ouvrage;
+
+      });
+      
+      });
+      
+      
+    }
+    
+        
+    
+    
+    
   // added after code gen - end 
  
 } 

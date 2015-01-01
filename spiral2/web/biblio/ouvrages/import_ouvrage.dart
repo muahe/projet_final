@@ -37,7 +37,6 @@ class ImportOuvrageElement extends PolymerElement {
 
     ouvrages = entries.ouvrages;
     initObservableLists();
-    //start();
   }
   
   
@@ -72,7 +71,6 @@ class ImportOuvrageElement extends PolymerElement {
             }
             
           }
-    //  spinActiv = false;
     }  
   
   storeData(Object result){
@@ -92,9 +90,6 @@ class ImportOuvrageElement extends PolymerElement {
         ouvrage.editeur = value['Editeur'];
         ouvrage.description = value['Description'];
         ouvrage.sujet = value['Sujet'];
-        //TypeOuvrage touvrage = new TypeOuvrage(tOuvrages.concept);
-       // touvrage.type = value['Type'];
-       // ouvrage.typeouvrage = touvrage;
         ouvrage.publicCible = "";
         ouvrage.nbreExemplaire = 1;
                 

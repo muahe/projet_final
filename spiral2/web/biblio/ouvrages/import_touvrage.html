@@ -6,7 +6,7 @@
 
 <polymer-element name="import-touvrage">
   <template>
-    <!--link rel="stylesheet" href="../css/importation.css"  /-->
+    
   <style>
 .upload_form_cont {
     background: -moz-linear-gradient(#ffffff, #f2f2f2);
@@ -143,13 +143,7 @@ paper-progress.pink::shadow #secondaryProgress {
   background-color: #f8bbd0;
 }
 
-/*
-.grid-container{
-    width: 100%; 
-    /*max-width: 1200px;*/      
-}*/
 
-/*-- our cleafix hack -- */ 
 .row:before, 
 .row:after {
     content:"";
@@ -161,7 +155,6 @@ paper-progress.pink::shadow #secondaryProgress {
     float: left; 
     min-height: 1px; 
     width: 20%; 
-    /*-- our gutter -- */
     padding: 12px; 
     background-color: #009CA9;
 }
@@ -171,7 +164,6 @@ paper-progress.pink::shadow #secondaryProgress {
     float: left; 
     min-height: 1px; 
     width: 20%; 
-    /*-- our gutter -- */
     padding: 12px; 
     background-color: #ffffff;
 }
@@ -185,7 +177,6 @@ paper-progress.pink::shadow #secondaryProgress {
 }
 
 
-/*-- some extra column content styling --*/
 [class*='col-'] > p {
  background-color: #FFC2C2; 
  padding: 0;
@@ -208,8 +199,6 @@ paper-progress.pink::shadow #secondaryProgress {
           <div>
             <paper-spinner alt="Chargement des enregistrements Types ouvrages" active={{spinActiv}}></paper-spinner>
             <paper-progress value="{{progressValue}}" max="100"></paper-progress><br>
-            <!--paper-button autofocus on-click="{{startUploading}}" raised>Importer les données</paper-button-->
-              <!--template if={{printGrid}}-->
               <div class="grid-container outline">
                 <div class="row">
                   <div class="col-1">ID Type ouvrage</div>   
@@ -222,7 +211,6 @@ paper-progress.pink::shadow #secondaryProgress {
                 </div>
               </template>
               </div>
-              <!--/template-->
           </div>
         </form>
       </div>

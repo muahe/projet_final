@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<link rel="import" href="packages/polymer/polymer.html">
+
+<link rel="import" href="../biblio_app.html">
+<link rel="import" href="../ouvrages/import_ouvrage.html">
+
+<link rel="import" href="packages/paper_elements/paper_input_decorator.html">
+<link rel="import" href="packages/paper_elements/paper_input.html">
+<link rel="import" href="packages/paper_elements/paper_button.html">
+
+
+<polymer-element name="ajout-ouvrage">
+  <template>
+
+  <style>
+  #formDiv {
+    width: 50%;
+    margin: 0 auto
+    
+  }
+
+  </style>
+
+      <h3>Ajout de nouvel ouvrage</h3>  
+      <br>
+
+    <div id="formDiv">
+        <paper-input-decorator floatingLabel label="Titre :" error="is not a number">
+            <input id="titre" is="core-input" value="{{ouvrage.titre}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Auteur :">
+            <input id="auteur" is="core-input" value="{{ouvrage.auteur}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="ISBN :">
+            <input id="isbn" is="core-input" value="{{ouvrage.isbn}}" on-input="{{validerNom}}">
+        </paper-input-decorator>        
+        <paper-input-decorator floatingLabel label="sujet :">
+            <input id="sujet" is="core-input" value="{{ouvrage.sujet}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Editeur :">
+            <input id="editeur" is="core-input" value="{{ouvrage.editeur}}" on-input="{{validerNom}}">
+        </paper-input-decorator>        
+        <paper-input-decorator floatingLabel label="Description :">
+            <input id="description" is="core-input" value="{{ouvrage.description}}" on-input="{{validerNom}}">
+        </paper-input-decorator>        
+        <paper-input-decorator floatingLabel label="Publique cible :">
+            <input id="cible" is="core-input" value="{{ouvrage.publicCible}}" on-input="{{validerNom}}">
+        </paper-input-decorator>        
+        <paper-input-decorator floatingLabel label="Nombre d'exemplaire :">
+            <input id="exemplaires" is="core-input" value="{{ouvrage.nbreExemplaire}}" on-input="{{validerNom}}">
+        </paper-input-decorator>                
+        <br><br>
+        <paper-button id="papButton" tabindex="0" on-click="{{validerBiblio}}">Ajouter</paper-button>
+        <paper-button id="papButton" tabindex="0" on-click="{{annuler}}">Annuler</paper-button>
+
+    </div>
+
+
+
+
+  </template>
+  <script type="application/dart" src="ajout_ouvrage.dart"></script>
+</polymer-element>   

@@ -4,12 +4,45 @@
 <link rel="import" href="../biblio_app.html">
 <link rel="import" href="../bibliotheques/import_biblio.html">
 
+<link rel="import" href="packages/paper_elements/paper_input_decorator.html">
+<link rel="import" href="packages/paper_elements/paper_input.html">
+<link rel="import" href="packages/paper_elements/paper_button.html">
+
+
 <polymer-element name="ajout-biblio">
   <template>
 
   <style>
+  #formDiv {
+    width: 50%;
+    margin: 0 auto
+    
+  }
 
   </style>
+
+      <h3>Ajout de nouvelle bibliothèque</h3>  
+      <br>
+
+    <div id="formDiv">
+        <paper-input-decorator floatingLabel label="Nom Bibliothèque :" error="is not a number">
+            <input id="nom" is="core-input" value="{{biblio.nom}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Adresse :">
+            <input id="adresse" is="core-input" value="{{biblio.adresse}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Informations supplémentaire :">
+            <input id="informations" is="core-input" value="{{biblio.informations}}" on-input="{{validerNom}}">
+        </paper-input-decorator>
+        <paper-input-decorator floatingLabel label="Horaires :">
+            <textarea id="horaires" on-input="{{validerNom}}">{{biblio.horaires}}</textarea>
+        </paper-input-decorator>        
+        <br><br>
+        <paper-button id="papButton" tabindex="0" on-click="{{validerBiblio}}">Ajouter</paper-button>
+        <paper-button id="papButton" tabindex="0" on-click="{{annuler}}">Annuler</paper-button>
+
+    </div>
+
 
 
 

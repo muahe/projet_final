@@ -33,6 +33,41 @@ class TypeOuvrage extends TypeOuvrageGen {
 
     }
  
+    
+
+
+    Future<TypeOuvrage> addToDB(TypeOuvrage touvrage){
+      
+      return BibliosDb.open().then((_){     
+        
+        var touvrageAsMap = touvrage.toJsonMap();
+        
+        var transaction;
+        transaction = BibliosDb.db.transaction("touvrStore", 'readwrite');  
+
+      
+      var objectStore = transaction.objectStore("touvrStore");
+      
+      
+      objectStore.add(touvrageAsMap).then((addedKey) {
+        touvrage.dbKey = addedKey;
+      });
+      
+      return transaction.completed.then((_) {
+        
+        return touvrage;
+
+      });
+      
+      });
+      
+      
+    }
+    
+    
+    
+    
+    
   // added after code gen - end 
  
 } 

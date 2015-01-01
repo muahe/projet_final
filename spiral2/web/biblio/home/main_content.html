@@ -6,6 +6,10 @@
 <link rel="import" href="../ouvrages/import_ouvrage.html">
 <link rel="import" href="../ouvrages/import_touvrage.html">
 <link rel="import" href="../usagers/import_usager.html">
+<link rel="import" href="../bibliotheques/ajout_biblio.html">
+<link rel="import" href="../ouvrages/ajout_ouvrage.html">
+<link rel="import" href="../ouvrages/ajout_touvrage.html">
+<link rel="import" href="../usagers/ajout_usager.html">
 
 <polymer-element name="main-content">
   <template>
@@ -29,6 +33,26 @@
   
   <template if="{{importUsagerClicked}}">  
     <import-usager></import-usager>
+  </template>  
+
+
+  <template if="{{ajoutBiblioClicked}}">  
+    <ajout-biblio biblio="{{newBiblio}}"></ajout-biblio>
+  </template>  
+
+
+  <template if="{{ajoutUsagerClicked}}">  
+    <ajout-usager usager="{{newUsager}}"></ajout-usager>
+  </template>  
+  
+  
+    <template if="{{ajoutOuvrageClicked}}">  
+    <ajout-ouvrage ouvrage="{{newOuvrage}}"></ajout-ouvrage>
+  </template>  
+  
+  
+    <template if="{{ajoutTouvrageClicked}}">  
+    <ajout-touvrage touvrage="{{newTouvrage}}"></ajout-touvrage>
   </template>  
 
   </template>

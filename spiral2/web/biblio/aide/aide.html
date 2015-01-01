@@ -8,7 +8,76 @@
   </head>
  
   <body>   
-    <p id="text"></p>
+    <H3>Presentartion du contexte :</H3>
+  <p>L'application de gestion des bibliothèques de la ville de Québec est notre choix de projet final du cours SIO-6014 du langage Dart.</p>
+    <p>L'idée est de créer un SIGB à base du langage Dart, ce qui nous permettra d'explorer et de mettre en application toutes les techniques apprises tout au long du cours Dart. </p>
+    <p>Ainsi notre application couvre :</p>
+    <p>- La création de models en utilisant : Model Concepts et Dartling.</p>
+    <p>- La manipulation du DOM, du HTML5 pour créer une application web complexe.</p>
+    <p>- L'utilisation de framework pour enrichir l'interface utilisateur comme Polymer et Paper elements.</p>
+    <p>- enregistrer les données manipulées dans une base de données locale (IndexedDB).</p>
+  <H3>Travail effectué :</H3>
+    <p>Nous avons créé :</p>
+    <p>- Le models concepts de notre application composés des concepts : - Bibliotheques, Usagers, Ouvrages, Type Ouvrage, Exemplaire.</p>
+    <p>- une Maquette de l'application avec Polymer, Paper elements.</p>
+  <p>- Un système d'authentification pour se connecter à l'application.</p>
+    <p>- l'importation des données opérationnelle.</p>
+    <p>- Les maquettes d'ajout des données opérationnelle mais l'enregistrement dans la base comporte encore certains bug.</p>
+    <p>- Le menu Aide operationnel.</p>
+    <H3>Travail à faire :</H3>
+    <p>- Menu usager qui n'est pas encore opérationnel dont :</p>
+    <p>* Recherche.</p>
+    <p>* Réservation.</p>
+  <p>* Profil utilisateur.</p>
+    <H2>Utilisation de l'application :</H2>
+    <p>Première étape : Puisque la base ne contient aucun usager lors du premier demarrage, un formulaire pour créer un usager est proposé lors de la première connexion.</p>
+    <p>&nbsp;</p>
+    <p><img src="../icons/css/biblio2/visual/formulaire_usager.png" alt="" width="792" height="510"></p>
+    <p>L'étape suivant est L'authentification à l'aide de l'usager créé ::</p>
+    <p><img src="../icons/css/biblio2/visual/authentification.png" alt="" width="838" height="570"></p>
+    <p>Prochaine étape nous mène à la page d'accueil de l'application :</p>
+    <p><img src="../icons/css/biblio2/visual/accueil.png" alt=""></p>
+    <p>À droite de l'application, s'affiche l'identification de l'usager connecté et un bouton pour se deconnecter.</p>
+    <p>À gauche, nous avons le logo et le menu de l'application.</p>
+    <p>Pour l'utilisation normal de l'application, nous devons faire une importation des données que nous utiliserons dans notre système et qui auraient pu exister dans le système précédent, </p>
+    <p><img src="../icons/css/biblio2/visual/menu administrateur_1.png" alt=""></p>
+    <p>Nous pourrons ainsi importer la liste des Bibliothèques, d'ouvrages, de types d'ouvrages et d'usager aussi.</p>
+    <p>les fichiers à utiliser pour l'importation respectant le format JSON de l'application se trouvent dans le dossier WEB / IMPORT à la racine du projet.</p>
+    <p></p>
+    <p>1- Importation des bibliothèques :</p>
+    <p></p>
+    <p><img src="../icons/css/biblio2/visual/importation_biblio.png" alt=""></p>
+    <p>Au clique du bouton choisissez un fichier, on peut choisir le fichier bibliotheques,json (notre fichier doit nécessairement se nommer ainsi).</p>
+    <p>une fois le fichier choisi, un cercle tournant le temps d'importation s'affiche et une barre de progression se remplie progressivement.</p>
+    <p>À la fin de l'importation, un message s'affiche informant du nombre d'enregistrement importés puis nous affiche la liste des données importées dans le tableau en dessous.</p>
+    <p><img src="../icons/css/biblio2/visual/importation_biblio1.png" alt=""></p>
+    <p></p>
+    <p></p>
+    <p><img src="../icons/css/biblio2/visual/importation_biblio2.png" alt=""></p>
+    <p>De la même façon nous pouvons importer les trois autres types de données.</p>
+    <p>Nous pouvons vérifier le résultat dans IndexedDB :</p>
+  <p></p>
+    <p><img src="../icons/css/biblio2/visual/importation_biblio3.png" alt=""></p>
+    <p></p>
+    <p>Pour Ajouter unitairement des données, nous pourrons le faire à travers le menu Ajout :</p>
+    <p></p>
+    <p></p>
+    <p><img src="../icons/css/biblio2/visual/ajout_ouvrage.png" alt=""></p>
+    <p></p>
+    <p>Menu A propos :</p>
+    <p></p>
+    <p><img src="../icons/css/biblio2/visual/apropos.png" alt=""></p>
+    <p></p>
+    <p></p>
+    <p>Compte tenu du temps qui nous est alloué, nous n'avons pas pu réaliser toutes les fonctionnalités que nous envisagions. Nous avons préféré préparer toute la partie non visible de notre application que nous pourrons par la suite interroger et presenter.</p>
+    <p>Plusieurs idées d'évolution ont aussi émerger au cours de développement comme :</p>
+    <p>- Ajout de cryptage pour sécuriser le mot de passe utilisateur.</p>
+    <p>- Ajout de la notion de Profil de sécurité utilisateur pour afficher ou masquer le menu administrateur selon l'usager connecté.</p>
+    <p>- Recherche en texte integral.</p>
+    <p>- ...</p>
+    <p></p>
+    <p></p>
+    <p> </p>
     
   </body>
 </html>

@@ -38,6 +38,36 @@ class Bibliotheque extends BibliothequeGen {
       horaires = entityMap['horaires'];
     }
  
+    Future<Bibliotheque> addToDB(Bibliotheque biblio){
+      
+      return BibliosDb.open().then((_){     
+        
+        var biblioAsMap = biblio.toJsonMap();
+        
+        var transaction;
+        transaction = BibliosDb.db.transaction("biblio", 'readwrite');  
+
+      
+      var objectStore = transaction.objectStore("biblio");
+      
+      
+      objectStore.add(biblioAsMap).then((addedKey) {
+        biblio.dbKey = addedKey;
+      });
+      
+      return transaction.completed.then((_) {
+        
+        return biblio;
+
+      });
+      
+      });
+      
+      
+    }
+    
+
+    
   // added after code gen - end 
  
 } 

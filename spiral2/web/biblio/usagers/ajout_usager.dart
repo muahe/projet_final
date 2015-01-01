@@ -6,13 +6,14 @@ import "package:dartling/dartling.dart";
 
 
 
-@CustomTag('ajout-biblio')
-class AjoutBiblioElement extends PolymerElement {
+
+@CustomTag('ajout-usager')
+class AjoutUsagerElement extends PolymerElement {
   
   
-  @published Bibliotheque biblio;
-  @observable Bibliotheque newBiblio;
-  @observable Bibliotheques biblios;
+  @published Usager usager;
+  @observable Usager newUsager;
+  @observable Usagers usagers;
   @observable String myErrorMessage = '';
   
   
@@ -20,19 +21,19 @@ class AjoutBiblioElement extends PolymerElement {
   DomainSession session;
   ReservationEntries entries;
   
-  AjoutBiblioElement.created() : super.created() {
+  AjoutUsagerElement.created() : super.created() {
     var biblioRepo = new Repository();
     
     domain = biblioRepo.getDomainModels("Biblio");
     session = domain.newSession();
     entries = domain.getModelEntries("Reservation");    
 
-    biblios = entries.bibliotheques;
-    biblio = new Bibliotheque(biblios.concept);
+    usagers = entries.usagers;
+    usager = new Usager(usagers.concept);
   }
  
   bool validerNom() {
-     if (biblio.nom.length < 1) {
+     if (usager.nom.length < 1) {
        myErrorMessage = "Le nom ne doit pas être vide ";
        return false;
      }
@@ -42,7 +43,7 @@ class AjoutBiblioElement extends PolymerElement {
 
    
    bool validerAdresse() {
-     if (biblio.adresse.length < 1) {
+     if (usager.adresse.length < 1) {
        myErrorMessage = "L'adresse ne doit pas être vide";
        return false;
      }
@@ -51,8 +52,8 @@ class AjoutBiblioElement extends PolymerElement {
    }
    
   
-   bool validerInformations() {
-     if (biblio.informations.length < 1) {
+   bool validerTel() {
+     if (usager.tel.length < 1) {
        myErrorMessage = "Le champ informations ne doit pas être vide";
        return false;
      }
@@ -61,8 +62,8 @@ class AjoutBiblioElement extends PolymerElement {
    }
    
    
-   bool validerHoraires() {
-     if (biblio.horaires.length < 1) {
+   bool validerCourriel() {
+     if (usager.courriel.length < 1) {
        myErrorMessage = "Le champ Horaires ne doit pas être vide";
        return false;
      }
@@ -70,24 +71,41 @@ class AjoutBiblioElement extends PolymerElement {
      return true;
    }
    
-   validerBiblio(Event event, Object detail, Node sender) {
-     event.preventDefault();
-     if (validerNom() && validerAdresse() && validerHoraires()
-         && validerInformations()) {
+   
 
-       addBiblio();
+   
+   
+   bool validermotPasse() {
+     if (usager.motPasse.length < 1) {
+       myErrorMessage = "Le champ Horaires ne doit pas être vide";
+       return false;
+     }
+     myErrorMessage = '';
+     return true;
+   }
+   
+   
+   validerUsager(Event event, Object detail, Node sender) {
+     event.preventDefault();
+     if (validerNom() && validerAdresse() && validerTel()
+         && validerCourriel() 
+         && validermotPasse()) {
+
+       addUsager();
      }else{
        myErrorMessage = "Veuillez remplir tout les champs obligatoires";
      }
    }
      
    
-   addBiblio() {
+   addUsager() {
 
-     biblio.idBibliotheque = "${_random().toString()}";
+     usager.idusager = "${_random().toString()}";
      
-     biblio.addToDB(biblio).then((_) {
-       newBiblio = new Bibliotheque(biblios.concept);
+     usager.addToDB(usager).then((_) {
+
+       newUsager = new Usager(usagers.concept);
+
      },
      onError: (e) { print('duplicate key'); } );    
      
